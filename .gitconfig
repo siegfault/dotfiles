@@ -1,0 +1,60 @@
+[color]
+	ui = true
+  [color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+  [color "diff"]
+    frag = magenta
+    old = red
+    new = green
+  [color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+  [color "diff"]
+    whitespace = red reverse
+    
+[alias]
+  s = status
+  b = branch
+  co = checkout
+  d = diff --check
+  dom = diff master
+  cm = commit -am
+  fo = fetch origin
+  po = push origin HEAD
+  p = pull
+  mer = pull origin master
+  rh = reset --hard
+  amend = commit --amend -m
+  ammend = commit --amend -m
+  ss = stash save
+  sl = stash list
+  sp = stash pop
+  sa = stash apply
+  sdi = stash show -p
+  sdr = stash drop
+  subm = submodule update --init --recursive
+
+[user]
+        name = Michael Siegfried
+        email = michael@procore.com
+[core]
+        autocrlf = true
+        mergeoptions = --no-edit
+	fileMode = false
+
+[merge]
+  tool = sublimerge
+
+[mergetool "sublimerge"]
+  cmd = subl -n --wait \"$REMOTE\" \"$BASE\" \"$LOCAL\" \"$MERGED\" --command \"sublimerge_diff_views\"
+  trustExitCode = false
+
+[diff]
+  tool = sublimerge
+
+[difftool "sublimerge"]
+  cmd = subl -n --wait \"$REMOTE\" \"$LOCAL\" --command \"sublimerge_diff_views {\\\"left_read_only\\\": true, \\\"right_read_only\\\": true}\"
