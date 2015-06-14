@@ -1,6 +1,10 @@
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+set sw=2
+set relativenumber 
+set number 
 call vundle#begin()
 
 " let Vundle manage Vundle, required
@@ -8,6 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'jgdavey/tslime.vim'
+Bundle 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
