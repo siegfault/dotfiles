@@ -44,3 +44,7 @@ alias cdp='cd ~/procore/'
 alias cddf='cd ~/dotfiles/'
 alias cddd='cd ~/data_day/'
 alias cde='cd ~/expiration/'
+
+#heroku
+alias pheroku='git push heroku'
+alias phm='git push heroku master'
