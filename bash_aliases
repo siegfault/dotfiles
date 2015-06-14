@@ -39,3 +39,8 @@ alias resques='QUEUE=* bundle exec rake resque:workers'
 alias spec='RAILS_ENV=test bundle exec rspec'
 alias mailcatcher='mailcatcher --http-ip 192.168.239.128'
 alias setup='rake db:drop && rake db:create && rake db:migrate && rake db:schema:dump && rake db:test:prepare'
+
+alias cdp='cd ~/procore'
+alias cddf='cd ~/dotfiles'
+alias cddd='cd ~/data_day'
+alias cde='cd ~/expiration'
