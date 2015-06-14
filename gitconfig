@@ -22,7 +22,8 @@
   co = checkout
   d = diff --check
   dom = diff master
-  cm = commit -am
+  cm = commit -m
+  ca = commit -am
   fo = fetch origin
   po = push origin HEAD
   p = pull
