@@ -49,5 +49,9 @@ alias cde='cd ~/expiration/'
 alias pheroku='git push heroku'
 alias phm='git push heroku master'
 
+#tmux
+alias tattach='tmux attach-session -t'
+alias tlist='tmux list-sessions'
+
 #vim
 alias vimpi='vim +PluginInstall +qall'
