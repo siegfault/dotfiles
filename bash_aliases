@@ -48,3 +48,6 @@ alias cde='cd ~/expiration/'
 #heroku
 alias pheroku='git push heroku'
 alias phm='git push heroku master'
+
+#vim
+alias vimpi='vim +PluginInstall +qall'

@@ -10,8 +10,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-Bundle 'thoughtbot/vim-rspec'
 Bundle 'jgdavey/tslime.vim'
+Bundle 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-surround'
 Bundle 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
