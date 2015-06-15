@@ -11,6 +11,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Bundle 'jgdavey/tslime.vim'
+Bundle 'ntpeters/vim-better-whitespace'
 Bundle 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
