@@ -41,7 +41,7 @@ alias spec='RAILS_ENV=test bundle exec rspec'
 alias mailcatcher='mailcatcher --http-ip 192.168.239.128'
 alias setup='rake db:drop && rake db:create && rake db:migrate && rake db:schema:dump && rake db:test:prepare'
 alias branches="gb -r | grep 'origin/\(dev/\)\?md\?s[_/]' | grep '\(dev/\)\?md\?s[/_].*'"
-alias kill_server="kill -9 $(ps aux | grep -v │ 'grep' | grep 'rails s' | awk '{print $2}')"
+alias kill_server='ps aux | grep -v grep | grep 0.0.0.0 | awk "{print \$2}" | xargs kill -9'
 
 alias cdp='cd ~/procore/'
 alias cddf='cd ~/dotfiles/'
