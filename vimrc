@@ -5,6 +5,10 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set sw=2
 set relativenumber 
 set number 
+set incsearch
+set hlsearch
+set cindent
+
 call vundle#begin()
 
 " let Vundle manage Vundle, required
