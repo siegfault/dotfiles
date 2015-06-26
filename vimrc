@@ -8,6 +8,8 @@ set number
 set incsearch
 set hlsearch
 set cindent
+set expandtab
+set tabstop=2
 
 call vundle#begin()
 
