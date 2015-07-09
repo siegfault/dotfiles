@@ -28,6 +28,7 @@ alias gsd='git stash show -p'
 # rails aliases
 alias r='bundle exec rails'
 alias rs='bundle exec rails s -b 0.0.0.0'
+alias ps='puma -b tcp://0.0.0.0:3000'
 alias rc='bundle exec rails c'
 alias rv='ruby -v'
 alias dbs='bundle exec rake db:structure:dump DB_STRUCTURE=db/structure.sql'
