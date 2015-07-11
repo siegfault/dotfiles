@@ -43,7 +43,7 @@
         name = Michael Siegfried
         email = michael@procore.com
 [core]
-        autocrlf = true
+	autocrlf = input
         mergeoptions = --no-edit
 	fileMode = false
 
