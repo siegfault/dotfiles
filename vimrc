@@ -21,6 +21,7 @@ Bundle 'ntpeters/vim-better-whitespace'
 Bundle 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
 Bundle 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
