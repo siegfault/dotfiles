@@ -10,6 +10,7 @@ set hlsearch
 set cindent
 set expandtab
 set tabstop=2
+set wildmode=longest,list
 
 call vundle#begin()
 
