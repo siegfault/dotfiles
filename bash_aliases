@@ -33,7 +33,7 @@ alias rc='bundle exec rails c'
 alias rv='ruby -v'
 alias dbs='bundle exec rake db:structure:dump DB_STRUCTURE=db/structure.sql'
 
-#utility aliases
+# utility aliases
 alias mig='bundle exec rake db:migrate'
 alias tag='git tag | tail -6'
 alias resque='QUEUE=* bundle exec rake resque:work'
@@ -50,13 +50,13 @@ alias cddf='cd ~/dotfiles/'
 alias cddd='cd ~/data_day/'
 alias cde='cd ~/expiration/'
 
-#heroku
+# heroku
 alias pheroku='git push heroku'
 alias phm='git push heroku master'
 
-#tmux
+# tmux
 alias tattach='tmux attach-session -t'
 alias tlist='tmux list-sessions'
 
-#vim
+# vim
 alias vimpi='vim +PluginInstall +qall'
