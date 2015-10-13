@@ -44,6 +44,7 @@ alias setup='rake db:drop && rake db:setup && rake db:migrate && rake db:test:pr
 alias branches="gb -r | grep 'origin/\(dev/\)\?md\?s[_/]' | grep '\(dev/\)\?md\?s[/_].*'"
 alias kill_server='ps aux | grep -v grep | grep 0.0.0.0 | awk "{print \$2}" | xargs kill -9'
 
+# directories
 alias cdp='cd ~/procore/'
 alias cddf='cd ~/dotfiles/'
 alias cddd='cd ~/data_day/'
