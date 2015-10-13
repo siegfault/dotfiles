@@ -11,6 +11,7 @@ alias l='ls -CF'
 
 # git aliases
 alias g='git'
+alias gap='git add -p'
 alias gs='git status'
 alias gb='git branch'
 alias gco='git checkout'
