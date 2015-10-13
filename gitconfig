@@ -38,6 +38,8 @@
   sdi = stash show -p
   sdr = stash drop
   subm = submodule update --init --recursive
+  sshow = "!f() { git stash show stash^{/$*} -p; }; f"
+  sapply = "!f() { git stash apply stash^{/$*}; }; f"
 
 [user]
         name = Michael Siegfried
