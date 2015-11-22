@@ -1,5 +1,4 @@
 set nocompatible
-set rtp+=~/.fzf
 set sw=2
 set relativenumber
 set number
@@ -14,6 +13,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'Valloric/YouCompleteMe'
 " Plug 'jgdavey/tslime.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'ntpeters/vim-better-whitespace'
 " Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-commentary'
