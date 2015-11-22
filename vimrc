@@ -12,10 +12,10 @@ set wildmode=longest,list
 call plug#begin('~/.vim/plugged')
 
 Plug 'Valloric/YouCompleteMe'
-" Plug 'jgdavey/tslime.vim'
+Plug 'benmills/vimux'
+Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'ntpeters/vim-better-whitespace'
-" Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
@@ -23,13 +23,13 @@ Plug 'tpope/vim-surround'
 call plug#end()
 
 " RSpec
-let g:rspec_command = 'call Send_to_Tmux("bin/rspec {spec}\n")'
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
 let mapleader = "\\"
+let test#strategy = "vimux"
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
 
 map <up> <nop>
 map <down> <nop>
