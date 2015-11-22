@@ -1,6 +1,4 @@
 set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.fzf
 set sw=2
 set relativenumber
@@ -12,22 +10,17 @@ set expandtab
 set tabstop=2
 set wildmode=longest,list
 
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plug 'Valloric/YouCompleteMe'
+" Plug 'jgdavey/tslime.vim'
+Plug 'ntpeters/vim-better-whitespace'
+" Plug 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-surround'
 
-Bundle 'jgdavey/tslime.vim'
-Bundle 'ntpeters/vim-better-whitespace'
-Bundle 'thoughtbot/vim-rspec'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-commentary'
-Bundle 'Valloric/YouCompleteMe'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
 
 " RSpec
 let g:rspec_command = 'call Send_to_Tmux("bin/rspec {spec}\n")'
