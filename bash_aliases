@@ -55,6 +55,11 @@ alias cde='cd ~/expiration/'
 alias pheroku='git push heroku'
 alias phm='git push heroku master'
 
+# nginx
+alias nstart='sudo /usr/local/nginx/sbin/nginx'
+alias nstop='sudo /usr/local/nginx/sbin/nginx -s stop'
+alias ntail='tail -f /usr/local/nginx/logs/access.log /usr/local/nginx/logs/error.log'
+
 # tmux
 alias tattach='tmux attach-session -t'
 alias tlist='tmux list-sessions'
