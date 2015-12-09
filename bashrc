@@ -120,5 +120,6 @@ fi
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+export PATH="$PATH:/home/vagrant/google_appengine/"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
