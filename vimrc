@@ -17,6 +17,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'Valloric/YouCompleteMe'
 Plug 'benmills/vimux'
+Plug 'godlygeek/tabular'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'ntpeters/vim-better-whitespace'
@@ -30,6 +31,8 @@ call plug#end()
 " RSpec
 let mapleader = "\\"
 let test#strategy = "vimux"
+let g:surround_45 = "<% \r %>"
+let g:surround_62 = "<%= \r %>"
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>g :TestVisit<CR>
