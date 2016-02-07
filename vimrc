@@ -1,12 +1,16 @@
 set nocompatible
+
 set sw=2
+set tabstop=2
+
 set relativenumber
 set number
+
 set incsearch
 set hlsearch
+
 set cindent
 set expandtab
-set tabstop=2
 set wildmode=longest,list
 
 call plug#begin('~/.vim/plugged')
@@ -28,10 +32,11 @@ let mapleader = "\\"
 let test#strategy = "vimux"
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
-nmap <silent> <leader>b :Gblame<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>t :TestNearest<CR>
+
+nmap <silent> <leader>b :Gblame<CR>
 
 map <up> <nop>
 map <down> <nop>
