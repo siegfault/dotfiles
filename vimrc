@@ -1,14 +1,18 @@
 set nocompatible
 
+" Whitespace
 set sw=2
 set tabstop=2
 
+" Numbering
 set relativenumber
 set number
 
+" Search
 set incsearch
 set hlsearch
 
+" Indentation
 set cindent
 set expandtab
 set wildmode=longest,list
