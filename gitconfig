@@ -49,3 +49,5 @@
         mergeoptions = --no-edit
 	fileMode = false
 
+[init]
+	templatedir = ~/.git_template
