@@ -15,11 +15,16 @@ set hlsearch
 " Indentation
 set cindent
 set expandtab
+
+" Plugins
+set updatetime=250 " vim-gitgutter
+
 set wildmode=longest,list
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'Valloric/YouCompleteMe'
+Plug 'airblade/vim-gitgutter'
 Plug 'benmills/vimux'
 Plug 'godlygeek/tabular'
 Plug 'janko-m/vim-test'
