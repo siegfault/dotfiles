@@ -1,53 +1,58 @@
 [color]
-	ui = true
-  [color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
-  [color "diff"]
-    frag = magenta
-    old = red
-    new = green
-  [color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
+ui = true
 
-  [color "diff"]
-    whitespace = red reverse
-    
+[color "branch"]
+current = yellow reverse
+local = yellow
+remote = green
+
+[color "diff"]
+frag = magenta
+old = red
+new = green
+
+[color "status"]
+added = yellow
+changed = green
+untracked = cyan
+
+[color "diff"]
+whitespace = red reverse
+
 [alias]
-  s = status
-  b = branch
-  co = checkout
-  d = diff --check
-  dom = diff master
-  cm = commit -m
-  ca = commit -am
-  fo = fetch origin
-  po = push origin HEAD
-  p = pull
-  mer = pull origin master
-  rh = reset --hard
-  amend = commit --amend -m
-  ammend = commit --amend -m
-  ss = stash save
-  sl = stash list
-  sp = stash pop
-  sa = stash apply
-  sdi = stash show -p
-  sdr = stash drop
-  subm = submodule update --init --recursive
-  sshow = "!f() { git stash show stash^{/$*} -p; }; f"
-  sapply = "!f() { git stash apply stash^{/$*}; }; f"
+s = status
+b = branch
+co = checkout
+d = diff --check
+dom = diff master
+cm = commit -m
+ca = commit -am
+fo = fetch origin
+po = push origin HEAD
+p = pull
+mer = pull origin master
+rh = reset --hard
+amend = commit --amend -m
+ammend = commit --amend -m
+ss = stash save
+sl = stash list
+sp = stash pop
+sa = stash apply
+sdi = stash show -p
+sdr = stash drop
+subm = submodule update --init --recursive
+sshow = "!f() { git stash show stash^{/$*} -p; }; f"
+sapply = "!f() { git stash apply stash^{/$*}; }; f"
 
 [user]
-        name = Michael Siegfried
-        email = michael@procore.com
+
+name = Michael Siegfried
+email = michael@procore.com
+
 [core]
-	autocrlf = input
-        mergeoptions = --no-edit
-	fileMode = false
+autocrlf = input
+mergeoptions = --no-edit
+fileMode = false
 
 [init]
-	templatedir = ~/.git_template
+templatedir = ~/.git_template
