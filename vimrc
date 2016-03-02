@@ -26,6 +26,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'Valloric/YouCompleteMe'
 Plug 'airblade/vim-gitgutter'
 Plug 'benmills/vimux'
+Plug 'edkolev/tmuxline.vim'
 Plug 'godlygeek/tabular'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -86,5 +87,8 @@ nnoremap <leader>x :set cursorline! cursorcolumn! <Enter>
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='sol'
+
+" tmuxline.vim
+let g:tmuxline_powerline_separators = 0
 
 map <c-p> :FZF -m<CR>
