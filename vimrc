@@ -36,6 +36,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -80,5 +82,9 @@ set scrolloff=2
 hi CursorLine   cterm=NONE ctermbg=255
 hi CursorColumn cterm=NONE ctermbg=255
 nnoremap <leader>x :set cursorline! cursorcolumn! <Enter>
+
+" vim-airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='sol'
 
 map <c-p> :FZF -m<CR>
