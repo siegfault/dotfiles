@@ -68,4 +68,7 @@ nmap <C-j> ]e
 vmap <C-k> [egv
 vmap <C-j> ]egv
 
+" Split lines
+map K i<Enter><Esc>
+
 map <c-p> :FZF -m<CR>
