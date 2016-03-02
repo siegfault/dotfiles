@@ -51,6 +51,7 @@ nmap <silent> <leader>t :TestNearest<CR>
 
 nmap <silent> <leader>b :Gblame<CR>
 
+" Disable arrow keys
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
