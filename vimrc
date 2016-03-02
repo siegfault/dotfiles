@@ -39,8 +39,10 @@ Plug 'tpope/vim-unimpaired'
 
 call plug#end()
 
+" Leader
+let mapleader = "\<Space>"
+
 " RSpec
-let mapleader = "\\"
 let test#strategy = "vimux"
 let g:surround_45 = "<% \r %>"
 let g:surround_62 = "<%= \r %>"
