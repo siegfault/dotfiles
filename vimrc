@@ -71,4 +71,7 @@ vmap <C-j> ]egv
 " Split lines
 map K i<Enter><Esc>
 
+" Keep your eye on the prize
+set scrolloff=2
+
 map <c-p> :FZF -m<CR>
