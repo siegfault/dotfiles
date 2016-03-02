@@ -47,13 +47,15 @@ let mapleader = "\<Space>"
 
 " RSpec
 let test#strategy = "vimux"
-let g:surround_45 = "<% \r %>"
-let g:surround_62 = "<%= \r %>"
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>t :TestNearest<CR>
+
+" Surround
+let g:surround_45 = "<% \r %>"
+let g:surround_62 = "<%= \r %>"
 
 nmap <silent> <leader>b :Gblame<CR>
 
