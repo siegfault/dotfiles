@@ -79,6 +79,6 @@ set scrolloff=2
 " Cursor location
 hi CursorLine   cterm=NONE ctermbg=255
 hi CursorColumn cterm=NONE ctermbg=255
-nnoremap x :set cursorline! cursorcolumn! <Enter>
+nnoremap <leader>x :set cursorline! cursorcolumn! <Enter>
 
 map <c-p> :FZF -m<CR>
