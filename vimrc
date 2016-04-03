@@ -33,6 +33,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'mcasper/vim-infer-debugger'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'rking/ag.vim'
+Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
@@ -57,6 +58,16 @@ nmap <silent> <leader>t :TestNearest<CR>
 " Surround
 let g:surround_45 = "<% \r %>"
 let g:surround_62 = "<%= \r %>"
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 nmap <silent> <leader>b :Gblame<CR>
 
