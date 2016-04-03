@@ -30,6 +30,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'godlygeek/tabular'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'mcasper/vim-infer-debugger'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-commentary'
@@ -58,6 +59,11 @@ let g:surround_45 = "<% \r %>"
 let g:surround_62 = "<%= \r %>"
 
 nmap <silent> <leader>b :Gblame<CR>
+
+" Easy debugger adding/removal
+nmap <Leader>P :call AddDebugger("O")<cr>
+nmap <Leader>p :call AddDebugger("o")<cr>
+nmap <Leader>d :call RemoveAllDebuggers()<cr>
 
 " Disable arrow keys
 map <up> <nop>
