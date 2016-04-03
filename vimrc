@@ -76,6 +76,11 @@ nmap <Leader>P :call AddDebugger("O")<cr>
 nmap <Leader>p :call AddDebugger("o")<cr>
 nmap <Leader>d :call RemoveAllDebuggers()<cr>
 
+" Folding
+set foldmethod=syntax
+set foldlevelstart=1
+autocmd BufWinEnter * silent! :%foldopen!
+
 " Disable arrow keys
 map <up> <nop>
 map <down> <nop>
