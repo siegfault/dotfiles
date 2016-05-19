@@ -111,3 +111,6 @@ let g:airline_theme='sol'
 let g:tmuxline_powerline_separators = 0
 
 map <c-p> :FZF -m<CR>
+
+" Automatic git commit wrapping
+autocmd Filetype gitcommit setlocal spell textwidth=72
