@@ -115,6 +115,14 @@ map <c-p> :FZF -m<CR>
 " Automatic git commit wrapping
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
+aug CursorInsert
+  au!
+  autocmd InsertLeave * setlocal nocursorline
+  autocmd InsertEnter * setlocal cursorline
+  autocmd InsertLeave * highlight CursorLine ctermbg=None ctermfg=None term=None cterm=None gui=None
+  autocmd InsertEnter * highlight CursorLine ctermbg=darkblue ctermfg=None term=None cterm=None gui=None
+aug END
+
 aug AutoloadVimrc
   au!
   au BufWritePost ~/dotfiles/vimrc source ~/.vimrc
