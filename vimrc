@@ -114,3 +114,9 @@ map <c-p> :FZF -m<CR>
 
 " Automatic git commit wrapping
 autocmd Filetype gitcommit setlocal spell textwidth=72
+
+aug AutoloadVimrc
+  au!
+  au BufWritePost ~/dotfiles/vimrc source ~/.vimrc
+  au BufWritePost ~/.vimrc source ~/.vimrc
+aug END
