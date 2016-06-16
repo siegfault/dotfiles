@@ -56,3 +56,5 @@ fileMode = false
 
 [init]
 templatedir = ~/.git_template
+[commit]
+	verbose = true
