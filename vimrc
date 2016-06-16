@@ -98,11 +98,6 @@ map K i<Enter><Esc>
 " Keep your eye on the prize
 set scrolloff=2
 
-" Cursor location
-hi CursorLine   cterm=NONE ctermbg=255
-hi CursorColumn cterm=NONE ctermbg=255
-nnoremap <leader>x :set cursorline! cursorcolumn! <Enter>
-
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='sol'
@@ -120,7 +115,7 @@ aug CursorInsert
   autocmd InsertLeave * setlocal nocursorline
   autocmd InsertEnter * setlocal cursorline
   autocmd InsertLeave * highlight CursorLine ctermbg=None ctermfg=None term=None cterm=None gui=None
-  autocmd InsertEnter * highlight CursorLine ctermbg=darkblue ctermfg=None term=None cterm=None gui=None
+  autocmd InsertEnter * highlight CursorLine ctermbg=lightblue ctermfg=None term=None cterm=None gui=None
 aug END
 
 aug AutoloadVimrc
