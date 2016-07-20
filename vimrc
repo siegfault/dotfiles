@@ -70,6 +70,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 nmap <silent> <leader>b :Gblame<CR>
+nmap <silent> <leader>n :set nu!<CR>:set rnu!<CR>
 
 " Easy debugger adding/removal
 nmap <Leader>P :call AddDebugger("O")<cr>
