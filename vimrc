@@ -28,9 +28,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'benmills/vimux'
 Plug 'ecomba/vim-ruby-refactoring'
 Plug 'edkolev/tmuxline.vim'
-Plug 'godlygeek/tabular'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/vim-easy-align'
 Plug 'mcasper/vim-infer-debugger'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ntpeters/vim-better-whitespace'
@@ -62,6 +62,12 @@ nmap <silent> <leader>t :TestNearest<CR>
 " Surround
 let g:surround_45 = "<% \r %>"
 let g:surround_62 = "<%= \r %>"
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 " Syntastic
 set statusline+=%#warningmsg#
