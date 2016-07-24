@@ -29,6 +29,7 @@ Plug 'andrewradev/splitjoin.vim'
 Plug 'benmills/vimux'
 Plug 'ecomba/vim-ruby-refactoring'
 Plug 'edkolev/tmuxline.vim'
+Plug 'exu/pgsql.vim'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/vim-easy-align'
@@ -93,6 +94,8 @@ nmap <silent> <leader>n :set nu!<CR>:set rnu!<CR>
 nmap <Leader>P :call AddDebugger("O")<cr>
 nmap <Leader>p :call AddDebugger("o")<cr>
 nmap <Leader>d :call RemoveAllDebuggers()<cr>
+
+nmap <Leader>pg :set syntax=pgsql<cr>
 
 " Disable arrow keys
 map <up> <nop>
