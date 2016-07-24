@@ -98,10 +98,16 @@ imap <left> <nop>
 imap <right> <nop>
 
 " Bubbling lines up/down
-nmap <C-k> [e
-nmap <C-j> ]e
-vmap <C-k> [egv
-vmap <C-j> ]egv
+nmap <Esc>k [e
+nmap <Esc>j ]e
+vmap <Esc>k [egv
+vmap <Esc>j ]egv
+
+" Tmux-like Navigation
+nmap <C-h> <C-w><Left>
+nmap <C-j> <C-w><Down>
+nmap <C-k> <C-w><Up>
+nmap <C-l> <C-w><Right>
 
 " Split lines
 map K i<Enter><Esc>
