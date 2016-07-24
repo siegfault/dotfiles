@@ -32,6 +32,7 @@ Plug 'godlygeek/tabular'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'mcasper/vim-infer-debugger'
+Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/syntastic'
@@ -70,6 +71,12 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Indent Guides
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+hi IndentGuidesOdd  guibg=red   ctermbg=3
+hi IndentGuidesEven guibg=green ctermbg=4
 
 nmap <silent> <leader>b :Gblame<CR>
 nmap <silent> <leader>n :set nu!<CR>:set rnu!<CR>
