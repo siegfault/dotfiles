@@ -63,6 +63,7 @@ alias ntail='tail -f /usr/local/nginx/logs/access.log /usr/local/nginx/logs/erro
 # tmux
 alias tattach='tmux attach-session -t'
 alias tlist='tmux list-sessions'
+alias mux='tmuxinator'
 
 # vim
 alias vimpi='vim +PluginInstall +qall'
