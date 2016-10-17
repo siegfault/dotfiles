@@ -2,7 +2,7 @@ alias be='bundle exec'
 alias structure='bundle exec rake db:structure:dump DB_STRUCTURE=db/structure.sql'
 alias fucking='sudo'
 alias fuckit='git reset --hard'
-alias fix_git='cd && rm -rf procore.old/ && mv procore/ procore.old/ && git clone git@192.168.33.240:git/procore.git procore/ && cd procore/ && git remote set-url origin git@github.com:procore/procore.git && cp ../procore.old/config/database.yml config/database.yml && git submodule update --init --recursive && cp ../procore.old/.env .env'
+alias fix_git='cd && rm -rf procore.old/ && mv procore/ procore.old/ && git clone git@192.168.41.240:git/procore.git procore/ && cd procore/ && git remote set-url origin git@github.com:procore/procore.git && cp ../procore.old/config/database.yml config/database.yml && git submodule update --init --recursive && cp ../procore.old/.env .env'
 
 # some more ls aliases
 alias ll='ls -alF'
