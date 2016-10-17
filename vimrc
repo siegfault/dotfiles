@@ -24,6 +24,7 @@ set wildmode=longest,list
 call plug#begin('~/.vim/plugged')
 
 Plug 'Valloric/YouCompleteMe'
+Plug 'airblade/vim-localorie'
 Plug 'airblade/vim-gitgutter'
 Plug 'andrewradev/splitjoin.vim'
 Plug 'benmills/vimux'
@@ -96,6 +97,10 @@ nmap <Leader>p :call AddDebugger("o")<cr>
 nmap <Leader>d :call RemoveAllDebuggers()<cr>
 
 nmap <Leader>pg :set syntax=pgsql<cr>
+
+" Locale expansion
+nnoremap <silent> <leader>lt :call localorie#translate()<CR>
+nnoremap <silent> <leader>le :call localorie#expand_key()<CR>
 
 " Disable arrow keys
 map <up> <nop>
