@@ -23,7 +23,6 @@ set wildmode=longest,list
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'Valloric/YouCompleteMe'
 Plug 'airblade/vim-localorie'
 Plug 'airblade/vim-gitgutter'
 Plug 'andrewradev/splitjoin.vim'
@@ -34,6 +33,7 @@ Plug 'exu/pgsql.vim'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/vim-easy-align'
+Plug 'maralla/completor.vim'
 Plug 'mcasper/vim-infer-debugger'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ntpeters/vim-better-whitespace'
@@ -90,6 +90,9 @@ hi IndentGuidesEven guibg=green ctermbg=4
 
 nmap <silent> <leader>b :Gblame<CR>
 nmap <silent> <leader>n :set nu!<CR>:set rnu!<CR>
+
+" Completion
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-x>\<C-u>\<C-p>"
 
 " Easy debugger adding/removal
 nmap <Leader>P :call AddDebugger("O")<cr>
