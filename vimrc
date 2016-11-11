@@ -26,6 +26,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-localorie'
 Plug 'airblade/vim-gitgutter'
 Plug 'andrewradev/splitjoin.vim'
+Plug 'andrewradev/switch.vim'
 Plug 'benmills/vimux'
 Plug 'ecomba/vim-ruby-refactoring'
 Plug 'edkolev/tmuxline.vim'
