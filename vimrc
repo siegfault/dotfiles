@@ -34,6 +34,7 @@ Plug 'exu/pgsql.vim'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/vim-easy-align'
+Plug 'KeitaNakamura/neodark.vim'
 Plug 'maralla/completor.vim'
 Plug 'mcasper/vim-infer-debugger'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -145,6 +146,8 @@ map <c-p> :FZF -m<CR>
 
 " Automatic git commit wrapping
 autocmd Filetype gitcommit setlocal spell textwidth=72
+
+colorscheme neodark
 
 aug CursorInsert
   au!
