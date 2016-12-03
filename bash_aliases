@@ -15,6 +15,7 @@ alias gap='git add -p'
 alias gs='git status'
 alias gb='git branch'
 alias gco='git checkout'
+alias gcp='git cherry-pick'
 alias gd='git diff'
 alias gcm="git commit"
 alias gca="git commit -a"

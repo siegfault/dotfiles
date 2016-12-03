@@ -27,6 +27,7 @@ d = diff --check
 dom = diff master
 cm = commit
 ca = commit -a
+cp = cherry-pick
 fo = fetch origin
 po = push origin HEAD
 p = pull
