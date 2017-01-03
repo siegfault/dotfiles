@@ -49,6 +49,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/Align'
+Plug 'vim-scripts/SQLUtilities'
 
 call plug#end()
 
@@ -143,6 +145,13 @@ let g:airline_theme='sol'
 let g:tmuxline_powerline_separators = 0
 
 map <c-p> :FZF -m<CR>
+
+" Sql formatting
+vmap <silent>sf   <Plug>SQLU_Formatter<CR>
+nmap <silent>scl  <Plug>SQLU_CreateColumnList<CR>
+nmap <silent>scd  <Plug>SQLU_GetColumnDef<CR>
+nmap <silent>scdt <Plug>SQLU_GetColumnDataType<CR>
+nmap <silent>scp  <Plug>SQLU_CreateProcedure<CR>
 
 " Automatic git commit wrapping
 autocmd Filetype gitcommit setlocal spell textwidth=72
