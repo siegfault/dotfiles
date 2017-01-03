@@ -118,10 +118,10 @@ imap <left> <nop>
 imap <right> <nop>
 
 " Bubbling lines up/down
-nmap <Esc>k [e
-nmap <Esc>j ]e
-vmap <Esc>k [egv
-vmap <Esc>j ]egv
+" nmap <Esc>k [e
+" nmap <Esc>j ]e
+" vmap <Esc>k [egv
+" vmap <Esc>j ]egv
 
 " Tmux-like Navigation
 nmap <C-h> <C-w><Left>
