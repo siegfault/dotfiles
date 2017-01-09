@@ -19,6 +19,8 @@ set expandtab
 " Plugins
 set updatetime=250 " vim-gitgutter
 
+set history=200
+
 set wildmenu
 set wildmode=full
 
