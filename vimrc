@@ -130,6 +130,10 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
+" Scroll through history
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
 " Tmux-like Navigation
 nmap <C-h> <C-w><Left>
 nmap <C-j> <C-w><Down>
