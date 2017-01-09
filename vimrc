@@ -123,10 +123,12 @@ imap <left> <nop>
 imap <right> <nop>
 
 " Bubbling lines up/down
-" nmap <Esc>k [e
-" nmap <Esc>j ]e
-" vmap <Esc>k [egv
-" vmap <Esc>j ]egv
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
 
 " Tmux-like Navigation
 nmap <C-h> <C-w><Left>
