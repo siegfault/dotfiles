@@ -123,6 +123,8 @@ imap <left> <nop>
 imap <right> <nop>
 
 " Bubbling lines up/down
+execute "set <M-j>=\ej"
+execute "set <M-k>=\ek"
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 inoremap <A-j> <Esc>:m .+1<CR>==gi
