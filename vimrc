@@ -19,7 +19,8 @@ set expandtab
 " Plugins
 set updatetime=250 " vim-gitgutter
 
-set wildmode=longest,list
+set wildmenu
+set wildmode=full
 
 call plug#begin('~/.vim/plugged')
 
