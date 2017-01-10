@@ -136,6 +136,9 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
+" Expand current path
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
 " Tmux-like Navigation
 nmap <C-h> <C-w><Left>
 nmap <C-j> <C-w><Down>
