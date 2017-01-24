@@ -24,6 +24,8 @@ set history=200
 set wildmenu
 set wildmode=full
 
+runtime macros/matchit.vim
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-localorie'
