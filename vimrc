@@ -43,6 +43,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/vim-easy-align'
 Plug 'kana/vim-textobj-lastpat'
 Plug 'KeitaNakamura/neodark.vim'
+Plug 'kana/vim-textobj-user'
 Plug 'maralla/completor.vim'
 Plug 'mcasper/vim-infer-debugger'
 Plug 'nathanaelkane/vim-indent-guides'
