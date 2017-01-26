@@ -30,8 +30,9 @@ runtime macros/matchit.vim
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'airblade/vim-localorie'
+Plug 'KeitaNakamura/neodark.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-localorie'
 Plug 'andrewradev/splitjoin.vim'
 Plug 'andrewradev/switch.vim'
 Plug 'benmills/vimux'
@@ -42,7 +43,6 @@ Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/vim-easy-align'
 Plug 'kana/vim-textobj-lastpat'
-Plug 'KeitaNakamura/neodark.vim'
 Plug 'kana/vim-textobj-user'
 Plug 'maralla/completor.vim'
 Plug 'mcasper/vim-infer-debugger'
