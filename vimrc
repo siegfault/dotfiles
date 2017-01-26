@@ -135,11 +135,13 @@ cnoremap <C-n> <Down>
 " Expand current path
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
-" Tmux-like Navigation
-nmap <C-h> <C-w><Left>
-nmap <C-j> <C-w><Down>
-nmap <C-k> <C-w><Up>
-nmap <C-l> <C-w><Right>
+" Bubbling lines up/down
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " Split lines
 map K i<Enter><Esc>
