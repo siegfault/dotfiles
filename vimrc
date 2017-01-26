@@ -118,6 +118,8 @@ nmap <Leader>pg :set syntax=pgsql<cr>
 nnoremap <silent> <leader>lt :call localorie#translate()<CR>
 nnoremap <silent> <leader>le :call localorie#expand_key()<CR>
 
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
 " Disable arrow keys
 map <up> <nop>
 map <down> <nop>
