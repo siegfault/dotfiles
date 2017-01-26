@@ -123,6 +123,9 @@ nnoremap <silent> <leader>le :call localorie#expand_key()<CR>
 
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
+nnoremap & :&&<CR>
+xnoremap & :&&<CR>
+
 " Disable arrow keys
 map <up> <nop>
 map <down> <nop>
