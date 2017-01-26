@@ -41,6 +41,7 @@ Plug 'exu/pgsql.vim'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/vim-easy-align'
+Plug 'kana/vim-textobj-lastpat'
 Plug 'KeitaNakamura/neodark.vim'
 Plug 'maralla/completor.vim'
 Plug 'mcasper/vim-infer-debugger'
