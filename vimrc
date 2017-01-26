@@ -148,6 +148,8 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 " Split lines
 map K i<Enter><Esc>
 
+map <Leader>c :%s///gn<CR>
+
 " Keep your eye on the prize
 set scrolloff=2
 
