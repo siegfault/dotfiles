@@ -11,6 +11,8 @@ set number
 " Search
 set incsearch
 set hlsearch
+set ignorecase
+set smartcase
 
 " Indentation
 set cindent
