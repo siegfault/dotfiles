@@ -2,7 +2,7 @@ alias be='bundle exec'
 alias structure='bundle exec rake db:structure:dump DB_STRUCTURE=db/structure.sql'
 alias fucking='sudo'
 alias fuckit='git reset --hard'
-alias fix_git='cd && rm -rf procore.old/ && mv procore/ procore.old/ && git clone git@192.168.41.240:git/procore.git procore/ && cd procore/ && git remote set-url origin git@github.com:procore/procore.git && cp ../procore.old/config/database.yml config/database.yml && git submodule update --init --recursive && cp ../procore.old/.env .env && cp ../procore.old/config/storage_profiles.yml config/storage_profiles.yml'
+alias fix_git='rm -rf ~/code/procore.old/ && mv ~/code/procore/ ~/code/procore.old/ && git clone git@192.168.41.240:git/procore.git ~/code/procore/ && cd ~/code/procore/ && git remote set-url origin git@github.com:procore/procore.git && cp ~/code/procore.old/config/database.yml config/database.yml && git submodule update --init --recursive && cp ~/code/procore.old/.env .env && cp ~/code/procore.old/config/storage_profiles.yml config/storage_profiles.yml'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -47,10 +47,10 @@ alias branches="gb -r | grep 'origin/\(dev/\)\?md\?s[_/]' | grep '\(dev/\)\?md\?
 alias kill_server='ps aux | grep -v grep | grep 0.0.0.0 | awk "{print \$2}" | xargs kill -9'
 
 # directories
-alias cdp='cd ~/procore/'
-alias cddf='cd ~/dotfiles/'
-alias cddd='cd ~/data_day/'
-alias cde='cd ~/expiration/'
+alias cdp='cd ~/code/procore/'
+alias cddf='cd ~/code/dotfiles/'
+alias cddd='cd ~/code/data_day/'
+alias cde='cd ~/code/expiration/'
 
 # heroku
 alias pheroku='git push heroku'
