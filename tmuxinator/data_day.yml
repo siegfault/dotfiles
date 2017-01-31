@@ -10,5 +10,7 @@ windows:
         - rs
         - rc
         - r db
-  - vim: vim
+  - vim:
+      panes:
+        - vim
   - terminal:

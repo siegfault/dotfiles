@@ -4,5 +4,7 @@ name: tic_tac_toe
 root: ~/code/tic_tac_toe_ai
 
 windows:
-  - vim: vim
+  - vim:
+      panes:
+        - vim
   - terminal:
