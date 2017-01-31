@@ -2,10 +2,7 @@ alias fucking='sudo'
 alias fuckit='git reset --hard'
 alias fix_git='rm -rf ~/code/procore.old/ && mv ~/code/procore/ ~/code/procore.old/ && git clone git@192.168.41.240:git/procore.git ~/code/procore/ && cd ~/code/procore/ && git remote set-url origin git@github.com:procore/procore.git && cp ~/code/procore.old/config/database.yml config/database.yml && git submodule update --init --recursive && cp ~/code/procore.old/.env .env && cp ~/code/procore.old/config/storage_profiles.yml config/storage_profiles.yml'
 
-# some more ls aliases
 alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
 
 # git aliases
 alias g='git'
@@ -54,6 +51,3 @@ alias ntail='tail -f /usr/local/nginx/logs/access.log /usr/local/nginx/logs/erro
 alias tattach='tmux attach-session -t'
 alias tlist='tmux list-sessions'
 alias mux='tmuxinator'
-
-# vim
-alias vimpi='vim +PluginInstall +qall'
