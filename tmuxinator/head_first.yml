@@ -5,7 +5,6 @@ root: ~/code/head_first_design_patterns
 
 windows:
   - vim:
-      layout: main-vertical
       panes:
         - vim
   - terminal:
