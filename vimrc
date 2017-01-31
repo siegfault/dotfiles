@@ -26,6 +26,10 @@ set history=200
 set wildmenu
 set wildmode=full
 
+set foldmethod=indent
+set foldlevel=99
+nnoremap <space> za
+
 runtime macros/matchit.vim
 
 call plug#begin('~/.vim/plugged')
