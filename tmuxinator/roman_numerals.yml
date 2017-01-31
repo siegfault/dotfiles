@@ -1,7 +1,7 @@
 # ~/.tmuxinator/roman_numerals.yml
 
 name: roman_numerals
-root: ~/roman_numerals
+root: ~/code/roman_numerals
 
 windows:
   - specs:

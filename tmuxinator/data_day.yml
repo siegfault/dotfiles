@@ -1,7 +1,7 @@
 # ~/.tmuxinator/data_day.yml
 
 name: data_day
-root: ~/data_day
+root: ~/code/data_day
 
 windows:
   - rails:
