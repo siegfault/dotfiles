@@ -43,7 +43,6 @@ sshow = "!f() { git stash show stash^{/$*} -p; }; f"
 sapply = "!f() { git stash apply stash^{/$*}; }; f"
 
 [user]
-
 name = Michael Siegfried
 email = michael@procore.com
 
@@ -55,4 +54,4 @@ fileMode = false
 [init]
 templatedir = ~/.git_template
 [commit]
-	verbose = true
+verbose = true
