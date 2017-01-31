@@ -30,6 +30,8 @@ set foldmethod=indent
 set foldlevel=99
 nnoremap <space> za
 
+set backspace=indent,eol,start
+
 runtime macros/matchit.vim
 
 call plug#begin('~/.vim/plugged')
