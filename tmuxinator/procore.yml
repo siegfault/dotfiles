@@ -7,10 +7,10 @@ windows:
   - rails:
       layout: tiled
       panes:
-        - pu
-        - rc
+        - puma -b tcp://0.0.0.0:3000
+        - bundle exec rails c
         - tail -f log/development.log
-        - r db
+        - bundle exec rails db
   - vim:
       layout: 565a,209x69,0,0{150x69,0,0,1,58x69,151,0,6}
       panes:
@@ -20,6 +20,6 @@ windows:
   - resque:
       layout: tiled
       panes:
-        - mailcatcher
-        - resque
-        - be sidekiq
+        - mailcatcher --http-ip 192.168.239.129
+        - QUEUE=* bundle exec rake resque:work
+        - bundle exec sidekiq

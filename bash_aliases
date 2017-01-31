@@ -28,20 +28,12 @@ alias gsp='git stash pop'
 alias gsd='git stash show -p'
 
 # rails aliases
-alias r='bundle exec rails'
-alias rs='bundle exec rails s -b 0.0.0.0'
-alias pu='puma -b tcp://0.0.0.0:3000'
-alias rc='bundle exec rails c'
-alias rv='ruby -v'
 alias dbs='bundle exec rake db:structure:dump DB_STRUCTURE=db/structure.sql'
 
 # utility aliases
 alias mig='bundle exec rake db:migrate'
 alias tag='git tag | tail -6'
-alias resque='QUEUE=* bundle exec rake resque:work'
-alias resques='QUEUE=* bundle exec rake resque:workers'
 alias spec='RAILS_ENV=test bundle exec rspec'
-alias mailcatcher='mailcatcher --http-ip 192.168.239.129'
 alias setup='rake db:drop && rake db:setup && rake db:migrate && rake db:test:prepare'
 alias branches="gb -r | grep 'origin/\(dev/\)\?md\?s[_/]' | grep '\(dev/\)\?md\?s[/_].*'"
 alias kill_server='ps aux | grep -v grep | grep 0.0.0.0 | awk "{print \$2}" | xargs kill -9'
