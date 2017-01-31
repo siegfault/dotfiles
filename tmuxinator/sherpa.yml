@@ -1,0 +1,10 @@
+# ~/.tmuxinator/sherpa.yml
+
+name: sherpa
+root: ~/code/sherpa
+
+windows:
+  - vim:
+      panes:
+        - vim
+  - terminal:

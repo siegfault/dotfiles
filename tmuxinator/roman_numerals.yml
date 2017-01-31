@@ -1,0 +1,13 @@
+# ~/.tmuxinator/roman_numerals.yml
+
+name: roman_numerals
+root: ~/roman_numerals
+
+windows:
+  - specs:
+    - rspec spec/numeral_spec.rb
+  - vim:
+      layout: 565a,209x69,0,0{150x69,0,0,1,58x69,151,0,6}
+      panes:
+        - vim spec/numeral_spec.rb
+        - rspec spec/numeral_spec.rb

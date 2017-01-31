@@ -1,0 +1,25 @@
+# ~/.tmuxinator/procore.yml
+
+name: procore
+root: ~/code/procore
+
+windows:
+  - rails:
+      layout: tiled
+      panes:
+        - pu
+        - rc
+        - tail -f log/development.log
+        - r db
+  - vim:
+      layout: 565a,209x69,0,0{150x69,0,0,1,58x69,151,0,6}
+      panes:
+        - vim
+        -
+  - terminal:
+  - resque:
+      layout: tiled
+      panes:
+        - mailcatcher
+        - resque
+        - be sidekiq
