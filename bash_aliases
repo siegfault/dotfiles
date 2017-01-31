@@ -1,5 +1,3 @@
-alias be='bundle exec'
-alias structure='bundle exec rake db:structure:dump DB_STRUCTURE=db/structure.sql'
 alias fucking='sudo'
 alias fuckit='git reset --hard'
 alias fix_git='rm -rf ~/code/procore.old/ && mv ~/code/procore/ ~/code/procore.old/ && git clone git@192.168.41.240:git/procore.git ~/code/procore/ && cd ~/code/procore/ && git remote set-url origin git@github.com:procore/procore.git && cp ~/code/procore.old/config/database.yml config/database.yml && git submodule update --init --recursive && cp ~/code/procore.old/.env .env && cp ~/code/procore.old/config/storage_profiles.yml config/storage_profiles.yml'
@@ -28,15 +26,14 @@ alias gsp='git stash pop'
 alias gsd='git stash show -p'
 
 # rails aliases
-alias dbs='bundle exec rake db:structure:dump DB_STRUCTURE=db/structure.sql'
-
-# utility aliases
 alias mig='bundle exec rake db:migrate'
 alias tag='git tag | tail -6'
 alias spec='RAILS_ENV=test bundle exec rspec'
 alias setup='rake db:drop && rake db:setup && rake db:migrate && rake db:test:prepare'
 alias branches="gb -r | grep 'origin/\(dev/\)\?md\?s[_/]' | grep '\(dev/\)\?md\?s[/_].*'"
 alias kill_server='ps aux | grep -v grep | grep 0.0.0.0 | awk "{print \$2}" | xargs kill -9'
+alias be='bundle exec'
+alias structure='bundle exec rake db:structure:dump DB_STRUCTURE=db/structure.sql'
 
 # directories
 alias cdp='cd ~/code/procore/'
