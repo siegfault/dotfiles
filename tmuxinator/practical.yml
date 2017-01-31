@@ -1,11 +1,10 @@
 # ~/.tmuxinator/practical.yml
 
 name: practical
-root: ~/practical_vim
+root: ~/code/practical_vim
 
 windows:
   - vim:
-      layout: main-vertical
       panes:
         - vim
   - terminal:

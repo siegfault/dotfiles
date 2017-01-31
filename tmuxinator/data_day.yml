@@ -1,14 +1,16 @@
 # ~/.tmuxinator/data_day.yml
 
 name: data_day
-root: ~/data_day
+root: ~/code/data_day
 
 windows:
   - rails:
       layout: main-vertical
       panes:
-        - rs
-        - rc
-        - r db
-  - vim: vim
+        - puma -b tcp://0.0.0.0:3000
+        - bundle exec rails c
+        - bundle exec rails db
+  - vim:
+      panes:
+        - vim
   - terminal:
