@@ -62,7 +62,6 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/Align'
 Plug 'vim-scripts/SQLUtilities'
 
@@ -163,7 +162,6 @@ set scrolloff=2
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='sol'
 set laststatus=2
 
 map <c-p> :FZF -m<CR>
