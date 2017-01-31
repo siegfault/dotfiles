@@ -1,0 +1,11 @@
+# ~/.tmuxinator/head_first.yml
+
+name: head_first
+root: ~/Code/head_first_design_patterns
+
+windows:
+  - vim:
+      layout: main-vertical
+      panes:
+        - vim
+  - terminal:

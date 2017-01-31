@@ -1,0 +1,8 @@
+# ~/.tmuxinator/tic_tac_toe.yml
+
+name: tic_tac_toe
+root: ~/Code/tic_tac_toe_ai
+
+windows:
+  - vim: vim
+  - terminal:

@@ -1,0 +1,14 @@
+# ~/.tmuxinator/expiration.yml
+
+name: expiration
+root: ~/expiration
+
+windows:
+  - rails:
+      layout: main-vertical
+      panes:
+        - rs
+        - rc
+        - r db
+  - vim: vim
+  - terminal:
