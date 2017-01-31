@@ -6,21 +6,9 @@ alias ll='ls -alF'
 
 # git aliases
 alias g='git'
-alias gap='git add -p'
 alias gs='git status'
-alias gb='git branch'
-alias gco='git checkout'
-alias gcp='git cherry-pick'
 alias gd='git diff'
-alias gcm="git commit"
-alias gca="git commit -a"
-alias gfo='git fetch origin'
-alias gpo='git push origin HEAD'
 alias gp='git pull'
-alias gss='git stash save'
-alias gsl='git stash list'
-alias gsp='git stash pop'
-alias gsd='git stash show -p'
 
 # rails aliases
 alias mig='bundle exec rake db:migrate'
