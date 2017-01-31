@@ -41,7 +41,6 @@ Plug 'andrewradev/splitjoin.vim'
 Plug 'andrewradev/switch.vim'
 Plug 'benmills/vimux'
 Plug 'ecomba/vim-ruby-refactoring'
-Plug 'edkolev/tmuxline.vim'
 Plug 'exu/pgsql.vim'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -168,9 +167,6 @@ set scrolloff=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='sol'
 set laststatus=2
-
-" tmuxline.vim
-let g:tmuxline_powerline_separators = 0
 
 map <c-p> :FZF -m<CR>
 
