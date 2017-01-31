@@ -167,6 +167,7 @@ set scrolloff=2
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='sol'
+set laststatus=2
 
 " tmuxline.vim
 let g:tmuxline_powerline_separators = 0
