@@ -1,14 +1,24 @@
+# generic
+alias ll='ls -alF'
 alias fucking='sudo'
 alias fuckit='git reset --hard'
-alias fix_git='rm -rf ~/code/procore.old/ && mv ~/code/procore/ ~/code/procore.old/ && git clone git@192.168.41.240:git/procore.git ~/code/procore/ && cd ~/code/procore/ && git remote set-url origin git@github.com:procore/procore.git && cp ~/code/procore.old/config/database.yml config/database.yml && git submodule update --init --recursive && cp ~/code/procore.old/.env .env && cp ~/code/procore.old/config/storage_profiles.yml config/storage_profiles.yml'
 
-alias ll='ls -alF'
+# directories
+alias cdp='cd ~/code/procore/'
+alias cddf='cd ~/code/dotfiles/'
+alias cddd='cd ~/code/data_day/'
+alias cde='cd ~/code/expiration/'
 
 # git aliases
 alias g='git'
 alias gs='git status'
 alias gd='git diff'
 alias gp='git pull'
+
+# tmux
+alias tattach='tmux attach-session -t'
+alias tlist='tmux list-sessions'
+alias mux='tmuxinator'
 
 # rails aliases
 alias mig='bundle exec rake db:migrate'
@@ -20,12 +30,6 @@ alias kill_server='ps aux | grep -v grep | grep 0.0.0.0 | awk "{print \$2}" | xa
 alias be='bundle exec'
 alias structure='bundle exec rake db:structure:dump DB_STRUCTURE=db/structure.sql'
 
-# directories
-alias cdp='cd ~/code/procore/'
-alias cddf='cd ~/code/dotfiles/'
-alias cddd='cd ~/code/data_day/'
-alias cde='cd ~/code/expiration/'
-
 # heroku
 alias pheroku='git push heroku'
 alias phm='git push heroku master'
@@ -35,7 +39,5 @@ alias nstart='sudo /usr/local/nginx/sbin/nginx'
 alias nstop='sudo /usr/local/nginx/sbin/nginx -s stop'
 alias ntail='tail -f /usr/local/nginx/logs/access.log /usr/local/nginx/logs/error.log'
 
-# tmux
-alias tattach='tmux attach-session -t'
-alias tlist='tmux list-sessions'
-alias mux='tmuxinator'
+# procore
+alias fix_git='rm -rf ~/code/procore.old/ && mv ~/code/procore/ ~/code/procore.old/ && git clone git@192.168.41.240:git/procore.git ~/code/procore/ && cd ~/code/procore/ && git remote set-url origin git@github.com:procore/procore.git && cp ~/code/procore.old/config/database.yml config/database.yml && git submodule update --init --recursive && cp ~/code/procore.old/.env .env && cp ~/code/procore.old/config/storage_profiles.yml config/storage_profiles.yml'
