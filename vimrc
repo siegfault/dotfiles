@@ -14,6 +14,8 @@ set wildmenu wildmode=full                  " Autocompletion
 set foldlevel=99 foldmethod=indent          " Folding
 set laststatus=2                            " Always display status bar
 
+let mapleader = "\<Space>"
+
 " Section: Plugins
 " ----------------
 
@@ -115,7 +117,6 @@ nmap <silent> <leader>b :Gblame<CR>
 " Section: Mappings
 " -----------------
 
-let mapleader = "\<Space>"
 nmap <silent> <leader>n :set nu!<CR>:set rnu!<CR> " Toggle Numbers
 nmap <Leader>pg :set syntax=pgsql<cr>
 map <Leader>c :%s///gn<CR> " Count search matches
