@@ -125,7 +125,7 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 nnoremap & :&&<CR>
 xnoremap & :&&<CR>
 
-nnoremap <space> za " Folding
+nnoremap <leader>f za " Folding
 
 " Disable arrow keys
 map <up> <nop>
