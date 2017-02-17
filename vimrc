@@ -13,6 +13,7 @@ set updatetime=250                          " vim-gitgutter
 set wildmenu wildmode=full                  " Autocompletion
 set foldlevel=99 foldmethod=indent          " Folding
 set laststatus=2                            " Always display status bar
+set viminfo='100,n$HOME/.vim/files/info/viminfo
 
 let mapleader = "\<Space>"
 
@@ -37,6 +38,7 @@ Plug 'kana/vim-textobj-lastpat'
 Plug 'kana/vim-textobj-user'
 Plug 'maralla/completor.vim'
 Plug 'mcasper/vim-infer-debugger'
+Plug 'mhinz/vim-startify'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'ngmy/vim-rubocop'
