@@ -1,2 +1,3 @@
 \pset pager off
 \pset null '(null)'
+\set ON_ERROR_ROLLBACK interactive
