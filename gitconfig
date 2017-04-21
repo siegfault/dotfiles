@@ -50,6 +50,7 @@ email = michael@procore.com
 autocrlf = input
 mergeoptions = --no-edit
 fileMode = false
+excludesfile = ~/.gitignore_global
 
 [init]
 templatedir = ~/.git_template
