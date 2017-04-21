@@ -1,7 +1,7 @@
 # generic
 alias ll='ls -alF'
 alias fucking='sudo'
-alias fuckit='git reset --hard'
+alias boom='git reset --hard'
 
 # directories
 alias cdp='cd ~/code/procore/'
