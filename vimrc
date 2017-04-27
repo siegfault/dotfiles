@@ -73,8 +73,10 @@ let g:surround_45 = "<% \r %>"
 let g:surround_62 = "<%= \r %>"
 
 " EasyAlign
-nmap ga <Plug>(EasyAlign) " Motion/Text Object (e.g. gaip)
-xmap ga <Plug>(EasyAlign) " Visual Mode (e.g. vipga)
+" Motion/Text Object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+" Visual Mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
 
 " Syntastic
 set statusline+=%#warningmsg#
