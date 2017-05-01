@@ -1,6 +1,6 @@
 # generic
 alias ll='ls -alF'
-alias fucking='sudo'
+alias srsly='sudo'
 alias boom='git reset --hard'
 
 # directories
