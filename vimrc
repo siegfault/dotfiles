@@ -13,6 +13,8 @@ set updatetime=250                          " vim-gitgutter
 set wildmenu wildmode=full                  " Autocompletion
 set foldlevel=99 foldmethod=indent          " Folding
 set laststatus=2                            " Always display status bar
+set list                                    " Allow changing character displays
+set listchars=tab:>-                        " Display tabs as >-
 set viminfo='100,n$HOME/.vim/files/info/viminfo
 
 let mapleader = "\<Space>"
