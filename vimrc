@@ -87,7 +87,7 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-nnoremap <silent> <Leader>sy :<C-u>call ToggleErrors()<CR>
+nnoremap <silent> <Leader>sy :<C-u>call ToggleSyntastic()<CR>
 
 " Indent Guides
 let g:indent_guides_start_level = 2
@@ -192,7 +192,7 @@ aug END
 " Section: Functions
 " ------------------
 
-function! ToggleErrors()
+function! ToggleSyntastic()
   if empty(filter(tabpagebuflist(), 'getbufvar(v:val, "&buftype") is# "quickfix"'))
     " No location/quickfix list shown, open syntastic error location panel
     Errors
