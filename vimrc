@@ -89,6 +89,10 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 nnoremap <silent> <Leader>sy :<C-u>call ToggleSyntastic()<CR>
 
+" RuboCop
+let g:vimrubocop_keymap = 0
+nmap <Leader>ru :<C-u>call ToggleRuboCop()<CR>
+
 " Indent Guides
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
@@ -191,6 +195,18 @@ aug END
 
 " Section: Functions
 " ------------------
+
+function! ToggleRuboCop()
+  for i in range(1, winnr('$'))
+    let bnum = winbufnr(i)
+    if getbufvar(bnum, '&buftype') == 'quickfix'
+      cclose
+      return
+    endif
+  endfor
+
+  RuboCop
+endfunction
 
 function! ToggleSyntastic()
   if empty(filter(tabpagebuflist(), 'getbufvar(v:val, "&buftype") is# "quickfix"'))
