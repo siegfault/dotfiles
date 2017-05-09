@@ -121,10 +121,6 @@ nmap <silent>scp  <Plug>SQLU_CreateProcedure<CR>
 " Vim Fugitive
 nmap <silent> <leader>b :Gblame<CR>
 
-" Rubocop
-let g:vimrubocop_keymap = 0
-nmap <Leader>r :RuboCop<CR>
-
 " Section: Mappings
 " -----------------
 
