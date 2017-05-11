@@ -1,2 +1,5 @@
-\pset pager off
 \pset null '(null)'
+\pset pager on
+\set ON_ERROR_ROLLBACK interactive
+\timing
+\x auto

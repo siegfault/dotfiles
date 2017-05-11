@@ -7,7 +7,7 @@ windows:
   - rails:
       layout: main-vertical
       panes:
-        - puma -b tcp://0.0.0.0:3001
+        - bundle exec puma -b tcp://0.0.0.0:3001
         - bundle exec rails c
         - bundle exec rails db
   - vim:

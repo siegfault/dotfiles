@@ -13,6 +13,9 @@ set updatetime=250                          " vim-gitgutter
 set wildmenu wildmode=full                  " Autocompletion
 set foldlevel=99 foldmethod=indent          " Folding
 set laststatus=2                            " Always display status bar
+set list                                    " Allow changing character displays
+set listchars=tab:>-                        " Display tabs as >-
+set viminfo='100,n$HOME/.vim/files/info/viminfo
 
 let mapleader = "\<Space>"
 
@@ -37,8 +40,10 @@ Plug 'kana/vim-textobj-lastpat'
 Plug 'kana/vim-textobj-user'
 Plug 'maralla/completor.vim'
 Plug 'mcasper/vim-infer-debugger'
+Plug 'mhinz/vim-startify'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'nelstrom/vim-visual-star-search'
+Plug 'ngmy/vim-rubocop'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/syntastic'
@@ -70,17 +75,23 @@ let g:surround_45 = "<% \r %>"
 let g:surround_62 = "<%= \r %>"
 
 " EasyAlign
-nmap ga <Plug>(EasyAlign) " Motion/Text Object (e.g. gaip)
-xmap ga <Plug>(EasyAlign) " Visual Mode (e.g. vipga)
+" Motion/Text Object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+" Visual Mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
 
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+nnoremap <silent> <Leader>sy :<C-u>call ToggleSyntastic()<CR>
+
+" RuboCop
+let g:vimrubocop_keymap = 0
+nmap <Leader>ru :<C-u>call ToggleRuboCop()<CR>
 
 " Indent Guides
 let g:indent_guides_start_level = 2
@@ -181,3 +192,27 @@ aug CursorInsert
   autocmd InsertLeave * highlight CursorLine ctermbg=None ctermfg=None term=None cterm=None gui=None
   autocmd InsertEnter * highlight CursorLine ctermbg=darkgrey ctermfg=None term=None cterm=None gui=None
 aug END
+
+" Section: Functions
+" ------------------
+
+function! ToggleRuboCop()
+  for i in range(1, winnr('$'))
+    let bnum = winbufnr(i)
+    if getbufvar(bnum, '&buftype') == 'quickfix'
+      cclose
+      return
+    endif
+  endfor
+
+  RuboCop
+endfunction
+
+function! ToggleSyntastic()
+  if empty(filter(tabpagebuflist(), 'getbufvar(v:val, "&buftype") is# "quickfix"'))
+    " No location/quickfix list shown, open syntastic error location panel
+    Errors
+  else
+    lclose
+  endif
+endfunction

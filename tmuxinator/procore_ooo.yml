@@ -23,3 +23,5 @@ windows:
         - mailcatcher --http-ip 192.168.239.129
         - QUEUE=* bundle exec rake resque:work
         - bundle exec sidekiq
+  - office:
+    - ssh db1.office.procore
