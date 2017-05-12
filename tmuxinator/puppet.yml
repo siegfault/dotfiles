@@ -1,0 +1,10 @@
+# ~/.tmuxinator/puppet.yml
+
+name: puppet
+root: ~/code/puppet
+
+windows:
+  - vim:
+      panes:
+        - vim
+  - terminal:

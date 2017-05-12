@@ -1,0 +1,10 @@
+# ~/.tmuxinator/deploy.yml
+
+name: deploy
+root: ~/code/deploy
+
+windows:
+  - vim:
+      panes:
+        - vim
+  - terminal:
