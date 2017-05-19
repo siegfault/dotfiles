@@ -38,6 +38,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/vim-easy-align'
 Plug 'kana/vim-textobj-lastpat'
 Plug 'kana/vim-textobj-user'
+Plug 'luochen1990/rainbow'
 Plug 'maralla/completor.vim'
 Plug 'mcasper/vim-infer-debugger'
 Plug 'mhinz/vim-startify'
@@ -99,6 +100,9 @@ let g:indent_guides_guide_size = 1
 let g:indent_guides_auto_colors = 0
 hi IndentGuidesOdd  guibg=red   ctermbg=3
 hi IndentGuidesEven guibg=green ctermbg=4
+
+" Rainbow Parens
+let g:rainbow_active = 1
 
 " Infer Debugger
 nmap <Leader>P :call AddDebugger("O")<cr>
