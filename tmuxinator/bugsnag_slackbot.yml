@@ -1,0 +1,10 @@
+# ~/.tmuxinator/bugsnag_slackbot.yml
+
+name: bugsnag_slackbot
+root: ~/code/bugsnag_slackbot
+
+windows:
+  - vim:
+      panes:
+        - vim
+  - terminal:

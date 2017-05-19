@@ -1,0 +1,10 @@
+# ~/.tmuxinator/ssh_bot.yml
+
+name: ssh_bot
+root: ~/code/ssh_bot
+
+windows:
+  - vim:
+      panes:
+        - vim
+  - terminal:
