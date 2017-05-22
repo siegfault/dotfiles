@@ -24,7 +24,7 @@ alias mux='tmuxinator'
 alias mig='bundle exec rake db:migrate'
 alias tag='git tag | tail -6'
 alias spec='RAILS_ENV=test bundle exec rspec'
-alias setup='rake db:drop && rake db:setup && rake db:migrate && rake db:test:prepare'
+alias setup='bundle exec rake db:drop && bundle exec rake db:setup && bundle exec rake db:migrate && bundle exec rake db:test:prepare'
 alias branches="gb -r | grep 'origin/\(dev/\)\?md\?s[_/]' | grep '\(dev/\)\?md\?s[/_].*'"
 alias kill_server='ps aux | grep -v grep | grep 0.0.0.0 | awk "{print \$2}" | xargs kill -9'
 alias be='bundle exec'
