@@ -24,4 +24,4 @@ windows:
         - QUEUE=* bundle exec rake resque:work
         - bundle exec sidekiq
   - office:
-    - ssh db1.office.procore
+    - ssh office_db
