@@ -1,0 +1,10 @@
+# ~/.tmuxinator/rails_4_test_prescriptions.yml
+
+name: rails_4_test_prescriptions
+root: ~/code/rails_4_test_prescriptions
+
+windows:
+  - vim:
+      panes:
+        - vim
+  - terminal:
