@@ -119,6 +119,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 " FZF
 map <c-p> :FZF -m<CR>
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .gitignore -g ""'
 
 " Sql Utilities
 vmap <silent>sf   <Plug>SQLU_Formatter<CR>
