@@ -198,7 +198,7 @@ autocmd Filetype gitcommit setlocal spell textwidth=72 " Automatic git commit wr
 
 aug AutoloadVimrc
   au!
-  au BufWritePost ~/dotfiles/vimrc source ~/.vimrc
+  au BufWritePost ~/code/dotfiles/vimrc source ~/.vimrc
   au BufWritePost ~/.vimrc source ~/.vimrc
 aug END
 
