@@ -46,10 +46,8 @@ Plug 'mcasper/vim-infer-debugger'
 Plug 'mhinz/vim-startify'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'nelstrom/vim-visual-star-search'
-Plug 'ngmy/vim-rubocop'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'rking/ag.vim'
-Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary'
@@ -60,6 +58,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/Align'
 Plug 'vim-scripts/SQLUtilities'
+Plug 'w0rp/ale'
 call plug#end()
 
 " Section: Plugin Settings
@@ -83,18 +82,9 @@ nmap ga <Plug>(EasyAlign)
 " Visual Mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-nnoremap <silent> <Leader>sy :<C-u>call ToggleSyntastic()<CR>
-
-" RuboCop
-let g:vimrubocop_keymap = 0
-nmap <Leader>ru :<C-u>call ToggleRuboCop()<CR>
+" Ale
+let g:ale_open_list = 1
+let g:ale_set_loclist = 1
 
 " Indent Guides
 let g:indent_guides_start_level = 2
@@ -214,27 +204,3 @@ aug CursorInsert
   autocmd InsertLeave * highlight CursorLine ctermbg=None ctermfg=None term=None cterm=None gui=None
   autocmd InsertEnter * highlight CursorLine ctermbg=darkgrey ctermfg=None term=None cterm=None gui=None
 aug END
-
-" Section: Functions
-" ------------------
-
-function! ToggleRuboCop()
-  for i in range(1, winnr('$'))
-    let bnum = winbufnr(i)
-    if getbufvar(bnum, '&buftype') == 'quickfix'
-      cclose
-      return
-    endif
-  endfor
-
-  RuboCop
-endfunction
-
-function! ToggleSyntastic()
-  if empty(filter(tabpagebuflist(), 'getbufvar(v:val, "&buftype") is# "quickfix"'))
-    " No location/quickfix list shown, open syntastic error location panel
-    Errors
-  else
-    lclose
-  endif
-endfunction
