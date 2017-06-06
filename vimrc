@@ -127,6 +127,11 @@ map <c-f>l :Lines<CR>
 map <c-f>b :Buffer<CR>
 map <c-f>m :Marks<CR>
 
+nmap <c-f><tab> <plug>(fzf-maps-n)
+xmap <c-f><tab> <plug>(fzf-maps-x)
+omap <c-f><tab> <plug>(fzf-maps-o)
+imap <c-f><tab> <plug>(fzf-maps-i)
+
 " Sql Utilities
 vmap <silent>sf   <Plug>SQLU_Formatter<CR>
 nmap <silent>scl  <Plug>SQLU_CreateColumnList<CR>
