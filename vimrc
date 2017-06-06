@@ -36,6 +36,7 @@ Plug 'ecomba/vim-ruby-refactoring'
 Plug 'exu/pgsql.vim'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'kana/vim-textobj-lastpat'
 Plug 'kana/vim-textobj-user'
@@ -118,8 +119,23 @@ nnoremap <silent> <leader>le :call localorie#expand_key()<CR>
 let g:airline#extensions#tabline#enabled = 1
 
 " FZF
-map <c-p> :FZF -m<CR>
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .gitignore -g ""'
+
+map <c-f>f :Files<CR>
+map <c-f>h :History<CR>
+map <c-f>l :Lines<CR>
+map <c-f>b :Buffer<CR>
+map <c-f>m :Marks<CR>
+
+nmap <c-f><tab> <plug>(fzf-maps-n)
+xmap <c-f><tab> <plug>(fzf-maps-x)
+omap <c-f><tab> <plug>(fzf-maps-o)
+imap <c-f><tab> <plug>(fzf-maps-i)
+
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
 
 " Sql Utilities
 vmap <silent>sf   <Plug>SQLU_Formatter<CR>
