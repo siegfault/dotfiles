@@ -132,6 +132,11 @@ xmap <c-f><tab> <plug>(fzf-maps-x)
 omap <c-f><tab> <plug>(fzf-maps-o)
 imap <c-f><tab> <plug>(fzf-maps-i)
 
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+
 " Sql Utilities
 vmap <silent>sf   <Plug>SQLU_Formatter<CR>
 nmap <silent>scl  <Plug>SQLU_CreateColumnList<CR>
