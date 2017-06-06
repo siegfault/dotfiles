@@ -119,8 +119,13 @@ nnoremap <silent> <leader>le :call localorie#expand_key()<CR>
 let g:airline#extensions#tabline#enabled = 1
 
 " FZF
-map <c-p> :FZF -m<CR>
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .gitignore -g ""'
+
+map <c-f>f :Files<CR>
+map <c-f>h :History<CR>
+map <c-f>l :Lines<CR>
+map <c-f>b :Buffer<CR>
+map <c-f>m :Marks<CR>
 
 " Sql Utilities
 vmap <silent>sf   <Plug>SQLU_Formatter<CR>
