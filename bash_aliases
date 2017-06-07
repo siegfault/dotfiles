@@ -30,6 +30,11 @@ alias kill_server='ps aux | grep -v grep | grep 0.0.0.0 | awk "{print \$2}" | xa
 alias be='bundle exec'
 alias structure='bundle exec rake db:structure:dump DB_STRUCTURE=db/structure.sql'
 
+# rubocop
+alias rc='bundle exec rubocop'
+alias rcac='bundle exec rubocop --auto-correct'
+alias rcagc='bundle exec rubocop --auto-gen-config'
+
 # heroku
 alias pheroku='git push heroku'
 alias phm='git push heroku master'
