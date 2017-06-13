@@ -186,6 +186,8 @@ map K i<Enter><Esc>
 
 autocmd Filetype gitcommit setlocal spell textwidth=72 " Automatic git commit wrapping
 
+autocmd VimResized * wincmd = " Automatic window resize
+
 aug AutoloadVimrc
   au!
   au BufWritePost ~/code/dotfiles/vimrc source ~/.vimrc
