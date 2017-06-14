@@ -19,6 +19,8 @@ alias gp='git pull'
 alias tattach='tmux attach-session -t'
 alias tlist='tmux list-sessions'
 alias mux='tmuxinator'
+alias cssh='tmux-cssh'
+alias cssh_example='echo "tmux-cssh \$(for i in \$(seq 1 8); do echo -n \"web\${i}.aws.bunker.production.procoretech.com \"; done)"'
 
 # rails aliases
 alias mig='bundle exec rake db:migrate'
