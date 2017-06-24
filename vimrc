@@ -85,6 +85,7 @@ xmap ga <Plug>(EasyAlign)
 " Ale
 let g:ale_open_list = 1
 let g:ale_set_loclist = 1
+let g:ale_lint_on_text_changed = 'never'
 
 " Indent Guides
 let g:indent_guides_start_level = 2
