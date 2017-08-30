@@ -109,7 +109,7 @@ nnoremap <silent> <leader>le :call localorie#expand_key()<CR>
 let g:airline#extensions#tabline#enabled = 1
 
 " FZF
-let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore *.swp -g ""'
+let $FZF_DEFAULT_COMMAND = 'ag --hidden -a --ignore *.swp -g ""'
 
 map <c-f>f :Files<CR>
 map <c-f>h :History<CR>
