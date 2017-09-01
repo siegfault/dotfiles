@@ -98,6 +98,8 @@ let g:surround_62 = "<%= \r %>"
 
 " Vim Fugitive
 nmap <silent> <leader>b :Gblame<CR>
+nmap <silent> <leader>c :Gcommit<CR>
+nmap <silent> <leader>s :Gstatus<CR>
 
 " Vimux
 let test#strategy = "vimux"
