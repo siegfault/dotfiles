@@ -1,0 +1,9 @@
+colorscheme neodark
+
+aug CursorInsert
+  au!
+  autocmd InsertLeave * setlocal nocursorline
+  autocmd InsertEnter * setlocal cursorline
+  autocmd InsertLeave * highlight CursorLine ctermbg=None ctermfg=None term=None cterm=None gui=None
+  autocmd InsertEnter * highlight CursorLine ctermbg=darkgrey ctermfg=None term=None cterm=None gui=None
+aug END
