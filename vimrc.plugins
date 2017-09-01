@@ -1,0 +1,108 @@
+runtime macros/matchit.vim
+
+call plug#begin('~/.vim/plugged')
+Plug 'KeitaNakamura/neodark.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-localorie'
+Plug 'andrewradev/splitjoin.vim'
+Plug 'andrewradev/switch.vim'
+Plug 'benmills/vimux'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'ecomba/vim-ruby-refactoring'
+Plug 'exu/pgsql.vim'
+Plug 'janko-m/vim-test'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'kana/vim-textobj-lastpat'
+Plug 'kana/vim-textobj-user'
+Plug 'luochen1990/rainbow'
+Plug 'maralla/completor.vim'
+Plug 'mcasper/vim-infer-debugger'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'nelstrom/vim-visual-star-search'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'rking/ag.vim'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-scripts/Align'
+Plug 'vim-scripts/SQLUtilities'
+Plug 'w0rp/ale'
+call plug#end()
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+
+" Ale
+let g:ale_open_list = 1
+let g:ale_set_loclist = 1
+let g:ale_lint_on_text_changed = 'never'
+
+" EasyAlign
+" Motion/Text Object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+" Visual Mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" FZF
+let $FZF_DEFAULT_COMMAND = 'ag --hidden -U -g ""'
+map <c-f>f :Files<CR>
+map <c-f>h :History<CR>
+map <c-f>l :Lines<CR>
+map <c-f>b :Buffer<CR>
+map <c-f>m :Marks<CR>
+nmap <c-f><tab> <plug>(fzf-maps-n)
+xmap <c-f><tab> <plug>(fzf-maps-x)
+omap <c-f><tab> <plug>(fzf-maps-o)
+imap <c-f><tab> <plug>(fzf-maps-i)
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+
+" Indent Guides
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+let g:indent_guides_auto_colors = 0
+hi IndentGuidesOdd  guibg=red   ctermbg=3
+hi IndentGuidesEven guibg=green ctermbg=4
+
+" Infer Debugger
+nmap <Leader>P :call AddDebugger("O")<cr>
+nmap <Leader>p :call AddDebugger("o")<cr>
+nmap <Leader>d :call RemoveAllDebuggers()<cr>
+
+" Localorie
+nnoremap <silent> <leader>lt :call localorie#translate()<CR>
+nnoremap <silent> <leader>le :call localorie#expand_key()<CR>
+
+" Rainbow Parens
+let g:rainbow_active = 1
+
+" Sql Utilities
+vmap <silent>sf   <Plug>SQLU_Formatter<CR>
+nmap <silent>scl  <Plug>SQLU_CreateColumnList<CR>
+nmap <silent>scd  <Plug>SQLU_GetColumnDef<CR>
+nmap <silent>scdt <Plug>SQLU_GetColumnDataType<CR>
+nmap <silent>scp  <Plug>SQLU_CreateProcedure<CR>
+
+" Surround
+let g:surround_45 = "<% \r %>"
+let g:surround_62 = "<%= \r %>"
+
+" Vim Fugitive
+nmap <silent> <leader>b :Gblame<CR>
+
+" Vimux
+let test#strategy = "vimux"
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>t :TestNearest<CR>

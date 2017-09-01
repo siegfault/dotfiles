@@ -1,0 +1,40 @@
+nmap <silent> <leader>n :set nu!<CR>:set rnu!<CR> " Toggle Numbers
+nmap <Leader>pg :set syntax=pgsql<cr>
+
+map <Leader>c :%s///gn<CR> " Count search matches
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
+nnoremap & :&&<CR>
+xnoremap & :&&<CR>
+
+nnoremap <leader>f za " Folding
+
+" Disable arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+
+" Scroll through history
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+" Expand current path
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+" Bubbling lines up/down
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
+
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-x>\<C-u>\<C-p>" " Completion
+
+" Split lines
+map K i<Enter><Esc>
