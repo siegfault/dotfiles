@@ -1,0 +1,10 @@
+# ~/.tmuxinator/pully.yml
+
+name: pully
+root: ~/code/pully
+
+windows:
+  - vim:
+      panes:
+        - vim
+  - terminal:
