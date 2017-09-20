@@ -2,7 +2,7 @@ nmap <silent> <leader>n :set nu!<CR>:set rnu!<CR> " Toggle Numbers
 nmap <Leader>pg :set syntax=pgsql<cr>
 
 map <Leader># :%s///gn<CR> " Count search matches
-map <Leader>x :<C-u>nohlsearch<CR><C-l>
+map <Leader>x :nohlsearch<CR>
 
 nnoremap & :&&<CR>
 xnoremap & :&&<CR>
