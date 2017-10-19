@@ -8,4 +8,9 @@ aug AutoloadVimrc
   au BufWritePost ~/.vimrc* source ~/.vimrc
 aug END
 
+augroup filetype_eruby_yaml
+  au!
+  au FileType eruby.yaml setlocal commentstring=#\ %s
+augroup end
+
 set autoread
