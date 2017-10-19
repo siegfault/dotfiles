@@ -1,0 +1,10 @@
+# ~/.tmuxinator/rubocop.yml
+
+name: rubocop
+root: ~/code/rubocop
+
+windows:
+  - vim:
+      panes:
+        - vim
+  - terminal:
