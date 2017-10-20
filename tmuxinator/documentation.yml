@@ -1,0 +1,10 @@
+# ~/.tmuxinator/documentation.yml
+
+name: documentation
+root: ~/code/documentation
+
+windows:
+  - vim:
+      panes:
+        - vim
+  - terminal:

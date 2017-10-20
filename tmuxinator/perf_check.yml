@@ -1,0 +1,10 @@
+# ~/.tmuxinator/perf_check.yml
+
+name: perf_check
+root: ~/code/perf_check
+
+windows:
+  - vim:
+      panes:
+        - vim
+  - terminal:
