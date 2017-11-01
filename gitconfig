@@ -7,9 +7,9 @@ local = yellow
 remote = green
 
 [color "diff"]
-frag = magenta
-old = red
-new = green
+frag = magenta bold
+old = red bold
+new = green bold
 
 [color "status"]
 added = yellow
@@ -18,6 +18,8 @@ untracked = cyan
 
 [color "diff"]
 whitespace = red reverse
+meta = 227
+commit = 227 bold
 
 [alias]
 s = status
@@ -41,6 +43,7 @@ sdr = stash drop
 subm = submodule update --init --recursive
 sshow = "!f() { git stash show stash^{/$*} -p; }; f"
 sapply = "!f() { git stash apply stash^{/$*}; }; f"
+patch = !git --no-pager diff
 
 [user]
 name = Michael Siegfried
@@ -51,8 +54,14 @@ autocrlf = input
 mergeoptions = --no-edit
 fileMode = false
 excludesfile = ~/.gitignore_global
+pager = diff-so-fancy | less --tabs=4 -RFX
 
 [init]
 templatedir = ~/.git_template
 [commit]
 verbose = true
+[color "diff-highlight"]
+oldNormal = red bold
+oldHighlight = red bold 52
+newNormal = green bold
+newHighlight = green bold 22
