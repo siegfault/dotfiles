@@ -4,7 +4,9 @@ alias srsly='sudo'
 alias boom='git reset --hard'
 
 # directories
+alias cdc='cd ~/code/'
 alias cdp='cd ~/code/procore/'
+alias cdpu='cd ~/code/puppet/'
 alias cddf='cd ~/code/dotfiles/'
 alias cddd='cd ~/code/data_day/'
 alias cde='cd ~/code/expiration/'
