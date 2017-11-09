@@ -20,7 +20,7 @@ windows:
   - resque:
       layout: tiled
       panes:
-        - mailcatcher --http-ip 192.168.239.129
+        - mailcatcher
         - QUEUE=* bundle exec rake resque:work
         - bundle exec sidekiq
   - office:
