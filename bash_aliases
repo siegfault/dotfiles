@@ -17,6 +17,7 @@ alias gs='git status'
 alias gd='git diff'
 alias gp='git pull'
 alias staged='git diff --staged'
+alias stat='git diff --stat'
 
 # tmux
 alias tattach='tmux attach-session -t'
