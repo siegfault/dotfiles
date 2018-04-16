@@ -37,9 +37,9 @@ alias be='bundle exec'
 alias structure='bundle exec rake db:structure:dump DB_STRUCTURE=db/structure.sql'
 
 # rubocop
-alias rc='bundle exec rubocop'
-alias rcac='bundle exec rubocop --auto-correct'
-alias rcagc='bundle exec rubocop --auto-gen-config'
+alias rc='bundle exec rubocop --format fuubar'
+alias rcac='bundle exec rubocop --auto-correct --format fuubar'
+alias rcagc='bundle exec rubocop --auto-gen-config --format fuubar'
 
 # heroku
 alias pheroku='git push heroku'
