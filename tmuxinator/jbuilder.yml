@@ -1,0 +1,10 @@
+# ~/.tmuxinator/jbuilder.yml
+
+name: jbuilder
+root: ~/code/jbuilder
+
+windows:
+  - vim:
+      panes:
+        - vim
+  - terminal:

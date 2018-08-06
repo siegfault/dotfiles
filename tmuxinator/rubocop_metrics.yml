@@ -1,0 +1,10 @@
+# ~/.tmuxinator/rubocop_metrics.yml
+
+name: rubocop_metrics
+root: ~/code/rubocop_metrics
+
+windows:
+  - editor:
+    - vim
+  - terminal:
+    -
