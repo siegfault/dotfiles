@@ -5,3 +5,7 @@ aug CursorInsert
   autocmd InsertLeave * setlocal nocursorline
   autocmd InsertEnter * setlocal cursorline
 aug END
+
+" Editing Mode
+command! Writemode setlocal spell | Goyo 70
+command! Codemode set nospell | Goyo!
