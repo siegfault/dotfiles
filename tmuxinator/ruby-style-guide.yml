@@ -1,0 +1,10 @@
+# ~/.tmuxinator/ruby-style-guide.yml
+
+name: ruby-style-guide
+root: ~/code/ruby-style-guide
+
+windows:
+  - vim:
+      panes:
+        - vim
+  - terminal:
