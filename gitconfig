@@ -25,6 +25,7 @@ commit = 227 bold
 s = status
 b = branch
 co = checkout
+cob = checkout -b
 d = diff --check
 dom = diff master
 cm = commit -v
