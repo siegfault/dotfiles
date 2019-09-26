@@ -99,7 +99,7 @@ nnoremap <silent> <leader>le :call localorie#expand_key()<CR>
 let g:rainbow_active = 1
 
 " Rubocop
-nmap <Leader>ra :RuboCop -a<CR>
+nmap <Leader>ra :RuboCop -a<CR><CR>:q<CR>
 
 " Sql Utilities
 vmap <silent>sf   <Plug>SQLU_Formatter<CR>
