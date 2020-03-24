@@ -1,7 +1,11 @@
 # generic
-alias ll='ls -alF'
 alias srsly='sudo'
 alias boom='git reset --hard'
+
+# default overrides
+alias cat='bat'
+alias ll='exa -l'
+alias ls='exa'
 
 # directories
 alias cdc='cd ~/code/'
