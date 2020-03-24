@@ -17,21 +17,21 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'ecomba/vim-ruby-refactoring'
 Plug 'exu/pgsql.vim'
 Plug 'janko-m/vim-test'
+Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'kana/vim-textobj-lastpat'
 Plug 'kana/vim-textobj-user'
+" Plug 'ludovicchabant/vim-gutentags'
 Plug 'luochen1990/rainbow'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'maralla/completor.vim'
 Plug 'mcasper/vim-infer-debugger'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'ngmy/vim-rubocop'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'rking/ag.vim'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary'
@@ -64,7 +64,7 @@ nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
 
 " FZF
-let $FZF_DEFAULT_COMMAND = 'ag --hidden -U -g ""'
+let $FZF_DEFAULT_COMMAND = 'rg --files'
 map <c-f>f :Files<CR>
 map <c-f>h :History<CR>
 map <c-f>l :Lines<CR>
@@ -76,7 +76,7 @@ omap <c-f><tab> <plug>(fzf-maps-o)
 imap <c-f><tab> <plug>(fzf-maps-i)
 imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-f> <plug>(fzf-complete-path)
-imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-j> <plug>(fzf-complete-file-rg)
 imap <c-x><c-l> <plug>(fzf-complete-line)
 
 " Indent Guides
