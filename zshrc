@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-ZSH_THEME="sunaku"
+ZSH_THEME="agnoster"
 
 export ZSH="/home/siggy/.oh-my-zsh"
 export NVM_DIR="$HOME/.nvm"
