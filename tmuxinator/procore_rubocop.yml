@@ -1,0 +1,10 @@
+# ~/.tmuxinator/procore_rubocop.yml
+
+name: procore_rubocop
+root: ~/code/procore_rubocop
+
+windows:
+  - vim:
+      panes:
+        - vim
+  - terminal:

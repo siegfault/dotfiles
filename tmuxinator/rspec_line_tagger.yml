@@ -1,0 +1,10 @@
+# ~/.tmuxinator/rspec_line_tagger.yml
+
+name: rspec_line_tagger
+root: ~/code/rspec_line_tagger
+
+windows:
+  - vim:
+      panes:
+        - vim
+  - terminal:

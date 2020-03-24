@@ -1,0 +1,10 @@
+# ~/.tmuxinator/jquery-rails.yml
+
+name: jquery-rails
+root: ~/code/jquery-rails
+
+windows:
+  - vim:
+      panes:
+        - vim
+  - terminal:

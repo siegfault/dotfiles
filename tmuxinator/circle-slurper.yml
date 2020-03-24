@@ -1,0 +1,10 @@
+# ~/.tmuxinator/circle-slurper.yml
+
+name: circle-slurper
+root: ~/code/circle-slurper
+
+windows:
+  - vim:
+      panes:
+        - vim
+  - terminal:
