@@ -4,6 +4,7 @@ alias boom='git reset --hard'
 
 # default overrides
 alias cat='bat'
+alias fd=fdfind
 alias ll='exa -l'
 alias ls='exa'
 
