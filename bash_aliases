@@ -8,14 +8,6 @@ alias fd=fdfind
 alias ll='exa -l'
 alias ls='exa'
 
-# directories
-alias cdc='cd ~/code/'
-alias cdp='cd ~/code/procore/'
-alias cdpu='cd ~/code/puppet/'
-alias cddf='cd ~/code/dotfiles/'
-alias cddd='cd ~/code/data_day/'
-alias cde='cd ~/code/expiration/'
-
 # git aliases
 alias g='git'
 alias gs='git status'
