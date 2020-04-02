@@ -41,6 +41,8 @@ source $ZSH/oh-my-zsh.sh
 unalias -m '*' # remove a LOT of oh-my-zsh aliases
 source $HOME/.aliases
 
+unsetopt share_history
+
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 [[ -s /home/siggy/.autojump/etc/profile.d/autojump.sh ]] && source /home/siggy/.autojump/etc/profile.d/autojump.sh
