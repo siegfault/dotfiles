@@ -12,6 +12,7 @@ set foldlevel=99 foldmethod=indent          " Folding
 set laststatus=2                            " Always display status bar
 set list                                    " Allow changing character displays
 set listchars=tab:>-                        " Display tabs as >-
+set hidden
 set viminfo='100,n$HOME/.vim/files/info/viminfo
 set swapfile
 set dir=/tmp
