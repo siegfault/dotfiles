@@ -1,0 +1,10 @@
+# ~/.tmuxinator/squirtle.yml
+
+name: squirtle
+root: ~/code/squirtle
+
+windows:
+  - vim:
+      panes:
+        - vim
+  - terminal:
