@@ -6,7 +6,6 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-export FZF_DEFAULT_COMMAND='rg --files'
 export EDITOR='vim'
 
 source $ZSH/oh-my-zsh.sh
