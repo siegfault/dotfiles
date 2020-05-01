@@ -1,6 +1,7 @@
 # generic
 alias srsly='sudo'
 alias boom='git reset --hard'
+alias rg='rg --hidden'
 
 # default overrides
 alias cat='bat'
