@@ -5,6 +5,8 @@ root: ~/code/squirtle
 
 windows:
   - vim:
+      layout: 565a,209x69,0,0{150x69,0,0,1,58x69,151,0,6}
       panes:
         - vim
+        -
   - terminal:
