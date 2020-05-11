@@ -1,10 +1,3 @@
-export EDITOR=vim
-export NVM_DIR="$HOME/.nvm"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -52,13 +45,7 @@ esac
 
 [ -z "$TMUX" ] && export TERM=xterm-256color
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-[[ -s /home/siggy/.autojump/etc/profile.d/autojump.sh ]] && source /home/siggy/.autojump/etc/profile.d/autojump.sh
 
 . ~/.bash-profile
-. ~/.aliases
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
 
 unset color_prompt force_color_prompt
