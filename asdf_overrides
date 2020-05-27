@@ -10,6 +10,10 @@ function asdf() {
           nohup `echo $(asdf which kibana) --log-file $(asdf where kibana)/kibana.log` >/dev/null&
           echo "[STARTED] Kibana `asdf current kibana`"
           ;;
+        "pg"|"postgres")
+          pg_ctl start
+          echo "[STARTED] Postgres `asdf current postgres`"
+          ;;
         *)
           echo "Plugin not found. Run \"asdf plugin-list\" to find available plugins."
           ;;
@@ -25,6 +29,10 @@ function asdf() {
           kill $(ps aux | grep "$(asdf where kibana)" | awk '{print $2}')
           echo "[STOPPED] Kibana `asdf current kibana`"
           ;;
+        "pg"|"postgres")
+          pg_ctl stop
+          echo "[STOPPED] Postgres `asdf current postgres`"
+          ;;
         *)
           echo "Plugin not found. Run \"asdf plugin-list\" to find available plugins."
           ;;
@@ -39,6 +47,10 @@ function asdf() {
         "kibana")
           asdf stop kibana
           asdf start kibana
+          ;;
+        "pg"|"postgres")
+          pg_ctl restart
+          echo "[RESTARTED] Postgres `asdf current postgres`"
           ;;
         *)
           echo "Plugin not found. Run \"asdf plugin-list\" to find available plugins."
