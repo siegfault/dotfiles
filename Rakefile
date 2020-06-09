@@ -3,6 +3,7 @@ require 'rake'
 desc "install the dot files into user's home directory"
 task :install do
   install_files(dotfiles)
+  install_files(snippets)
   install_files(tmuxinator_files)
 end
 
@@ -10,6 +11,10 @@ def dotfiles
   Dir.glob('*').select do |file|
     File.file?(file)
   end - %w[Rakefile tags]
+end
+
+def snippets
+  Dir.glob('vim/UltiSnips/*')
 end
 
 def tmuxinator_files
