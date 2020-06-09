@@ -1,0 +1,57 @@
+global !p
+import re
+
+def underscore(snip, string):
+  snip.rv = re.sub(r"(\w)([A-Z])", r"\1_\2", string).lower()
+
+def format_args(snip, position, formatter):
+  format_arguments(snip, arguments_in_position(position), formatter)
+
+def format_arguments(snip, arguments, formatter):
+  if len(arguments):
+    snip.rv = ''
+
+    for arg in arguments:
+      snip += formatter(arg)
+
+def arguments_in_position(position):
+  arguments = re.sub(": [^,)]+", '', t[position])
+  arguments = re.sub(':', '', arguments).split(', ')
+  return [argument.strip() for argument in arguments if argument]
+endglobal
+
+snippet spec "new spec file" b
+# frozen_string_literal: true
+
+require '${1}_helper'
+
+RSpec.describe ${2} do
+  let(:${4:`!p underscore(snip, t[2])`}) { described.class.new(${5}) }`!p
+format_args(snip, 5, lambda tag: f'  let(:{tag}) { {tag} }')
+`$0
+end
+endsnippet
+
+snippet poro "new class" b
+# frozen_string_literal: true
+
+class ${1}
+  def initalize(${2})`!p
+format_args(snip, 2, lambda param: f'    @{param} = {param}')
+`
+  end$0`!p
+
+arguments = arguments_in_position(2)
+
+snip.rv = ''
+
+if len(arguments):
+  arguments = map(lambda arg: f':{arg}', arguments)
+
+  snip += ''
+  snip += '  private'
+  snip += ''
+  snip += f'  attr_reader {", ".join(arguments)}'
+`
+end
+endsnippet

@@ -35,6 +35,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'ngmy/vim-rubocop'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary'
@@ -113,6 +114,26 @@ nmap <silent>scp  <Plug>SQLU_CreateProcedure<CR>
 " Surround
 let g:surround_45 = "<% \r %>"
 let g:surround_62 = "<%= \r %>"
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger = "<nop>"
+let g:ulti_expand_or_jump_res = 0
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsEditSplit="vertical"
+
+function ExpandSnippetOrCarriageReturn()
+    let snippet = UltiSnips#ExpandSnippetOrJump()
+    if g:ulti_expand_or_jump_res > 0
+        return snippet
+    else
+        return "\<CR>"
+    endif
+endfunction
+
+inoremap <expr> <CR> pumvisible() ? "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "\<CR>"
+nmap <leader>sp :Snippets<CR>a
+nmap <leader>sn :UltiSnipsEdit<CR>
 
 " Vim Fugitive
 nmap <silent> <leader>b :Gblame<CR>

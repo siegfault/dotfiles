@@ -2,10 +2,29 @@ require 'rake'
 
 desc "install the dot files into user's home directory"
 task :install do
-  replace_all = false
-  Dir['*'].each do |file|
-    next if %w[Rakefile tags].include? file
+  install_files(dotfiles)
+  install_files(snippets)
+  install_files(tmuxinator_files)
+end
 
+def dotfiles
+  Dir.glob('*').select do |file|
+    File.file?(file)
+  end - %w[Rakefile tags]
+end
+
+def snippets
+  Dir.glob('vim/UltiSnips/*')
+end
+
+def tmuxinator_files
+  Dir.glob('tmuxinator/*')
+end
+
+def install_files(files)
+  replace_all = false
+
+  files.sort.each do |file|
     if File.exist?(File.join(ENV['HOME'], ".#{file}"))
       if replace_all
         replace_file(file)
