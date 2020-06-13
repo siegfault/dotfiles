@@ -1,16 +1,16 @@
-# ~/.tmuxinator/image_processing.yml
+# ~/.tmuxinator/{NAME}.yml
 
-name: image_processing
-root: ~/code/image_processing
+name: {NAME}
+root: ~/code/{NAME}
 
 windows:
   - rails:
       layout: tiled
       panes:
-        - pu
-        - rc
+        - bundle exec puma -b tcp://127.0.0.1:{UNIQUE_PORT_NUMBER}
+        - bundle exec rails c
         - tail -f log/development.log
-        - r db
+        - bundle exec rails db
   - vim:
       layout: 565a,209x69,0,0{150x69,0,0,1,58x69,151,0,6}
       panes:
@@ -21,5 +21,5 @@ windows:
       layout: tiled
       panes:
         - mailcatcher
-        - resque
-        - be sidekiq
+        - QUEUE=* bundle exec rake resque:work
+        - bundle exec sidekiq

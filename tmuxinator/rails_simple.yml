@@ -1,13 +1,13 @@
-# ~/.tmuxinator/expiration.yml
+# ~/.tmuxinator/{NAME}.yml
 
-name: expiration
-root: ~/code/expiration
+name: {NAME}
+root: ~/code/{NAME}
 
 windows:
   - rails:
       layout: main-vertical
       panes:
-        - bundle exec puma -b tcp://127.0.0.1:3001
+        - bundle exec puma -b tcp://127.0.0.1:{UNIQUE_PORT_NUMBER}
         - bundle exec rails c
         - bundle exec rails db
   - vim:
