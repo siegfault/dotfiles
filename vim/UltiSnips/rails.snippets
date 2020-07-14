@@ -26,7 +26,7 @@ snippet spec "new spec file" b
 require '${1}_helper'
 
 RSpec.describe ${2} do
-  let(:${4:`!p underscore(snip, t[2])`}) { described.class.new(${5}) }`!p
+  let(:${4:`!p underscore(snip, t[2])`}) { described_class.new(${5}) }`!p
 format_args(snip, 5, lambda tag: f'  let(:{tag}) { {tag} }')
 `$0
 end
@@ -36,7 +36,7 @@ snippet poro "new class" b
 # frozen_string_literal: true
 
 class ${1}
-  def initalize(${2})`!p
+  def initialize(${2})`!p
 format_args(snip, 2, lambda param: f'    @{param} = {param}')
 `
   end$0`!p
