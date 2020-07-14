@@ -16,6 +16,7 @@ Plug 'benmills/vimux'
 Plug 'blueyed/vim-diminactive'
 Plug 'camspiers/animate.vim'
 Plug 'camspiers/lens.vim'
+Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ecomba/vim-ruby-refactoring'
 Plug 'exu/pgsql.vim'
@@ -114,6 +115,9 @@ nmap <silent>scp  <Plug>SQLU_CreateProcedure<CR>
 let g:surround_45 = "<% \r %>"
 let g:surround_62 = "<%= \r %>"
 
+" Switch
+let g:switch_mapping = "<leader>sw"
+
 " UltiSnips
 let g:UltiSnipsExpandTrigger = "<nop>"
 let g:ulti_expand_or_jump_res = 0
@@ -141,6 +145,7 @@ nmap <silent> <leader>s :Gstatus<CR>
 
 " Vimux
 let test#strategy = "vimux"
+let test#ruby#rspec#executable = 'DISABLE_SPRING=1 RAILS_ENV=test bundle exec rspec'
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>g :TestVisit<CR>
