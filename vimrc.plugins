@@ -53,8 +53,7 @@ call plug#end()
 let g:airline#extensions#tabline#enabled = 1
 
 " Ale
-let g:ale_open_list = 1
-let g:ale_open_list = 'on_save'
+let g:ale_open_list = 0
 let g:ale_ruby_rubocop_executable = 'bundle'
 let g:ale_linters = {
 \   'ruby': ['rails_best_practices', 'reek', 'rubocop', 'ruby'],
