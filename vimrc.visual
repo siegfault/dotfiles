@@ -1,5 +1,9 @@
 colorscheme neodark
 
+highlight ALEInfoLine    cterm=reverse
+highlight ALEWarningLine cterm=reverse
+highlight ALEInfoLine    cterm=reverse
+
 aug CursorInsert
   au!
   autocmd InsertLeave * setlocal nocursorline
