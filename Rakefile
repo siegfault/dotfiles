@@ -25,21 +25,24 @@ def install_files(files)
   replace_all = false
 
   files.sort.each do |file|
-    if File.exist?(File.join(ENV['HOME'], ".#{file}"))
-      if replace_all
-        replace_file(file)
-      else
-        print "overwrite ~/.#{file}? [ynaq] "
-        case $stdin.gets.chomp
-        when 'a'
-          replace_all = true
+    filename = File.join(ENV['HOME'], ".#{file}")
+    if File.exist?(filename)
+      unless File.symlink?(filename)
+        if replace_all
           replace_file(file)
-        when 'y'
-          replace_file(file)
-        when 'q'
-          exit
         else
-          puts "skipping ~/.#{file}"
+          print "overwrite ~/.#{file}? [ynaq] "
+          case $stdin.gets.chomp
+          when 'a'
+            replace_all = true
+            replace_file(file)
+          when 'y'
+            replace_file(file)
+          when 'q'
+            exit
+          else
+            puts "skipping ~/.#{file}"
+          end
         end
       end
     else
