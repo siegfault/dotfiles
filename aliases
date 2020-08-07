@@ -6,7 +6,7 @@ alias rg='rg --hidden'
 # default overrides
 alias cat='bat'
 alias fd=fdfind
-alias ll='exa -l'
+alias ll='exa -la'
 alias ls='exa'
 
 # git aliases
