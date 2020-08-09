@@ -10,7 +10,7 @@ end
 def dotfiles
   Dir.glob('*').select do |file|
     File.file?(file)
-  end - %w[Rakefile tags]
+  end - %w[Rakefile setup.sh tags]
 end
 
 def snippets
