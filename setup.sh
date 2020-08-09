@@ -17,6 +17,9 @@ sudo apt -qq update
 
 if [ $INITIAL_SETUP -eq 0 ]; then
   mkdir -p ~/code
+  sudo apt -qq install -y git
+  git config --global user.email "michael@procore.com"
+  git config --global user.name "Michael Siegfried"
   git clone https://github.com/siegfault/dotfiles.git $DOTFILES_PATH
 fi
 cd $DOTFILES_PATH
@@ -26,9 +29,10 @@ bash "scripts/directories.sh"
 bash "scripts/keys.sh"
 bash "scripts/install.sh"
 bash "scripts/settings.sh"
-bash "scripts/versions.sh"
 
 rake install
+
+bash "scripts/versions.sh"
 
 if [ $INITIAL_SETUP -eq 0 ]; then
   git remote set-url origin git@github.com/siegfault/dotfiles.git
