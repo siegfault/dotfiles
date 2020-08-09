@@ -35,7 +35,7 @@ rake install
 bash "scripts/versions.sh"
 
 if [ $INITIAL_SETUP -eq 0 ]; then
-  git remote set-url origin git@github.com/siegfault/dotfiles.git
+  git remote set-url origin git@github.com:siegfault/dotfiles.git
 fi
 
 sudo apt -qq upgrade -y
