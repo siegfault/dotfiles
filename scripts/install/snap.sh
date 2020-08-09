@@ -8,5 +8,5 @@ function snap_install {
   fi
 }
 
-snap_install slack
+snap_install "slack --classic" slack
 snap_install spotify
