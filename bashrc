@@ -35,5 +35,8 @@ fi
 
 [ -z "$TMUX" ] && export TERM=xterm-256color
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source $HOME/.asdf/completions/asdf.bash
 
 source ~/.profile
