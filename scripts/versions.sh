@@ -12,14 +12,3 @@ if [ ! -d $RUBY_BUILD ]; then
 else
   echo "Already installed: ruby-build"
 fi
-
-asdf list postgres &> /dev/null
-if [ $? -ne 0 ]; then
-  echo "Installing: postgres"
-  read -p "Select pg version: " pg_version
-  asdf plugin add postgres
-  asdf install postgres $pg_version
-  asdf global postgres $pg_version
-else
-  echo "Already installed: postgres"
-fi
