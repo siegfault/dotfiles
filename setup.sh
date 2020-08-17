@@ -30,7 +30,7 @@ bash "scripts/keys.sh"
 bash "scripts/install.sh"
 bash "scripts/settings.sh"
 
-rake install
+/usr/bin/rake install
 
 bash "scripts/versions.sh"
 
