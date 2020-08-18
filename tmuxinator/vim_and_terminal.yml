@@ -1,7 +1,7 @@
-# ~/.tmuxinator/{NAME}.yml
+# ~/.tmuxinator/NAME.yml
 
-name: {NAME}
-root: ~/code/{NAME}
+name: NAME
+root: ~/code/NAME
 
 windows:
   - vim:

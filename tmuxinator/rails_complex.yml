@@ -1,13 +1,13 @@
-# ~/.tmuxinator/{NAME}.yml
+# ~/.tmuxinator/NAME.yml
 
-name: {NAME}
-root: ~/code/{NAME}
+name: NAME
+root: ~/code/NAME
 
 windows:
   - rails:
       layout: tiled
       panes:
-        - bundle exec puma -b tcp://127.0.0.1:{UNIQUE_PORT_NUMBER}
+        - bundle exec puma -b tcp://127.0.0.1:UNIQUE_PORT_NUMBER
         - bundle exec rails c
         - tail -f log/development.log
         - bundle exec rails db
