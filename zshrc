@@ -1,9 +1,11 @@
-ZSH_THEME="agnoster"
 
 export ZSH="/home/siggy/.oh-my-zsh"
+export ALIEN_SECTIONS_LEFT=(exit battery user path vcs_branch vcs_status vcs_dirty ssh prompt)
+export ALIEN_THEME="red"
 
 source $HOME/.profile
 source $ZSH/oh-my-zsh.sh
+source $HOME/alien/alien.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -11,6 +13,7 @@ COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 ENABLE_CORRECTION="true"
 HYPHEN_INSENSITIVE="true"
+ZSH_THEME="alien/alien"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/zsh_completion" ] && \. "$NVM_DIR/zsh_completion"  # This loads nvm zsh_completion
