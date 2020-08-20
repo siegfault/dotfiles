@@ -1,6 +1,5 @@
-
 export ZSH="/home/siggy/.oh-my-zsh"
-export ALIEN_SECTIONS_LEFT=(exit battery user path vcs_branch vcs_status vcs_dirty ssh prompt)
+export ALIEN_SECTIONS_LEFT=(exit battery user path vcs_branch:async vcs_status:async vcs_dirty:async ssh prompt)
 export ALIEN_THEME="red"
 
 source $HOME/.profile
