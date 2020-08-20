@@ -16,7 +16,7 @@ apt_install memcached
 apt_install npm
 apt_install rake
 apt_install rbenv
-apt_install redis
+apt_install redis redis-cli
 apt_install ripgrep rg
 apt_install ruby-build
 apt_install tmux
