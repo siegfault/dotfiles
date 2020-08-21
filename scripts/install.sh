@@ -3,6 +3,7 @@
 bash "scripts/install/apt.sh"
 bash "scripts/install/asdf.sh"
 bash "scripts/install/cargo.sh"
+bash "scripts/install/docker.sh"
 bash "scripts/install/github.sh"
 bash "scripts/install/npm.sh"
 bash "scripts/install/script.sh"
