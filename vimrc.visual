@@ -11,5 +11,5 @@ aug CursorInsert
 aug END
 
 " Editing Mode
-command! Writemode setlocal spell | Goyo 70
-command! Codemode set nospell | Goyo!
+command! Codemode set nospell | Goyo! | Limelight!
+command! Writemode setlocal spell | Goyo | Limelight
