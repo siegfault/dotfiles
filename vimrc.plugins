@@ -25,6 +25,7 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/indentLine'
 Plug 'junegunn/vim-easy-align'
 Plug 'kana/vim-textobj-lastpat'
 Plug 'kana/vim-textobj-user'
@@ -32,7 +33,6 @@ Plug 'kana/vim-textobj-user'
 Plug 'luochen1990/rainbow'
 Plug 'maralla/completor.vim'
 Plug 'mcasper/vim-infer-debugger'
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'ngmy/vim-rubocop'
 Plug 'ntpeters/vim-better-whitespace'
@@ -82,13 +82,6 @@ imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-j> <plug>(fzf-complete-file-rg)
 imap <c-x><c-l> <plug>(fzf-complete-line)
-
-" Indent Guides
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-let g:indent_guides_auto_colors = 0
-hi IndentGuidesOdd  guibg=red   ctermbg=3
-hi IndentGuidesEven guibg=green ctermbg=4
 
 " Infer Debugger
 nmap <Leader>P :call AddDebugger("O")<cr>
