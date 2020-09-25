@@ -8,5 +8,6 @@ function snap_install {
   fi
 }
 
+snap_install circleci
 snap_install "slack --classic" slack
 snap_install spotify
