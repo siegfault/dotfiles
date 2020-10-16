@@ -11,6 +11,7 @@ function apt_install {
 apt_install curl
 apt_install fonts-powerline
 apt_install fzf
+apt_install gist
 apt_install git
 apt_install htop
 apt_install kubectl
