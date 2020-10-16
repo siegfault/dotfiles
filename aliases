@@ -38,7 +38,7 @@ function gclone () {
   read -p "Directory [code/${name}]: " directory
 
   basename=${directory##*/}
-  basename=${basename:-name}
+  basename=${basename:-${name}}
   tmux_name=$(tmuxinator list -n | tail -n+2 | fzf --prompt="Tmux config: ")
   tmux_source=~/.tmuxinator/${tmux_name}.yml
   tmux_destination=~/.tmuxinator/${basename}.yml
