@@ -3,7 +3,7 @@
 source "scripts/install/is_installed.sh"
 
 if ! is_installed cargo ; then
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh --profile default -qy
 fi
 
 function cargo_install {
