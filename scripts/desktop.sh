@@ -11,7 +11,7 @@ ZOOM_URL=https://zoom.us/client/latest
 function wget_install {
   if ! is_installed $1 ; then
     wget -P $INSTALL_DIRECTORY $2/$3
-    sudo apt install $INSTALL_DIRECTORY/$3
+    sudo apt install -y $INSTALL_DIRECTORY/$3
   fi
 }
 
