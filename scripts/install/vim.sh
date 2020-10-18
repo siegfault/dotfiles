@@ -7,7 +7,7 @@ if ! is_installed vim ; then
   sudo apt-get remove --purge vim vim-runtime vim-gnome vim-tiny vim-gui-common
   sudo rm -rf /usr/local/share/vim /usr/bin/vim
 
-  sudo apt-get install gtk+-2.0 liblua5.1-dev luajit libluajit-5.1 python-dev python3-dev libperl-dev libncurses5-dev libatk1.0-dev libx11-dev libxpm-dev libxt-dev
+  sudo apt-get install -y gtk+-2.0 liblua5.1-dev luajit libluajit-5.1 python-dev python3-dev libperl-dev libncurses5-dev libatk1.0-dev libx11-dev libxpm-dev libxt-dev
   cd ~/code/installs
   git clone https://github.com/vim/vim
   cd vim
