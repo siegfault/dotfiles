@@ -1,75 +1,75 @@
-[color]
-ui = true
-
-[color "branch"]
-current = yellow reverse
-local = yellow
-remote = green
-
-[color "diff"]
-frag = magenta bold
-old = red bold
-new = green bold
-
-[color "status"]
-added = yellow
-changed = green
-untracked = cyan
-
-[color "diff"]
-whitespace = red reverse
-meta = 227
-commit = 227 bold
-
 [alias]
-s = status
-b = branch
-co = checkout
-cob = checkout -b
-d = diff --check
-dom = diff master
-cm = commit -v
-ca = commit -av
-cp = cherry-pick
-fo = fetch origin
-po = push -u origin HEAD
-p = pull
-mer = pull origin master
-ss = stash save
-sl = stash list
-sp = stash pop
-sa = stash apply
-sdi = stash show -p
-sdr = stash drop
-subm = submodule update --init --recursive
-sshow = "!f() { git stash show stash^{/$*} -p; }; f"
-sapply = "!f() { git stash apply stash^{/$*}; }; f"
-patch = !git --no-pager diff
-
-[user]
-name = Michael Siegfried
-email = michael@procore.com
-
-[core]
-attributesfile=~/.gitattributes
-autocrlf = input
-mergeoptions = --no-edit
-fileMode = false
-excludesfile = ~/.gitignore_global
-pager = diff-so-fancy | less --tabs=4 -RFX
-
-[init]
-templatedir = ~/.git_template
-[commit]
-verbose = true
-[color "diff-highlight"]
-oldNormal = red bold
-oldHighlight = red bold 52
-newNormal = green bold
-newHighlight = green bold 22
+  b      = branch
+  ca     = commit -av
+  cm     = commit -v
+  co     = checkout
+  cob    = checkout -b
+  cp     = cherry-pick
+  d      = diff --check
+  dom    = diff master
+  fo     = fetch origin
+  mer    = pull origin master
+  p      = pull
+  patch  = !git --no-pager diff
+  po     = push -u origin HEAD
+  s      = status
+  sa     = stash apply
+  sapply = "!f() { git stash apply stash^{/$*}; }; f"
+  sdi    = stash show -p
+  sdr    = stash drop
+  sl     = stash list
+  sp     = stash pop
+  ss     = stash save
+  sshow  = "!f() { git stash show stash^{/$*} -p; }; f"
+  subm   = submodule update --init --recursive
 
 [branch]
-autosetupmerge = always
+  autosetupmerge = always
+
+[color]
+  ui = true
+
+[color "branch"]
+  current = yellow reverse
+  local   = yellow
+  remote  = green
+
+[color "diff"]
+  commit     = 227 bold
+  frag       = magenta bold
+  meta       = 227
+  new        = green bold
+  old        = red bold
+  whitespace = red reverse
+
+[color "diff-highlight"]
+  oldNormal    = red bold
+  oldHighlight = red bold 52
+  newNormal    = green bold
+  newHighlight = green bold 22
+
+[color "status"]
+  added     = yellow
+  changed   = green
+  untracked = cyan
+
+[commit]
+  verbose = true
+
+[core]
+  attributesfile=~/.gitattributes
+  autocrlf = input
+  excludesfile = ~/.gitignore_global
+  fileMode = false
+  mergeoptions = --no-edit
+  pager = diff-so-fancy | less --tabs=4 -RFX
 
 [diff "rspec"]
-xfuncname = "^[ \t]*((RSpec|describe|context|it|before|after|around|feature|scenario)[ \t].*)$"
+  xfuncname = "^[ \t]*((RSpec|describe|context|it|before|after|around|feature|scenario)[ \t].*)$"
+
+[init]
+  templatedir = ~/.git_template
+
+[user]
+  name = Michael Siegfried
+  email = michael@procore.com
