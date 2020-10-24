@@ -32,7 +32,7 @@ alias rcac='bundle exec rubocop --auto-correct --format fuubar'
 alias rcagc='bundle exec rubocop --auto-gen-config --format fuubar'
 
 function mux () {
-  project=$(tmuxinator list -n | tail -n +2 | fzf --prompt "Project: " -q $1)
+  project=$(tmuxinator list -n | tail -n +2 | fzf --prompt "Project: " -1 -q "$1")
 
   tmuxinator start $project
 }
