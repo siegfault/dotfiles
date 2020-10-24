@@ -4,7 +4,6 @@ alias boom='git reset --hard'
 alias rg='rg --hidden'
 
 # default overrides
-alias fd=fdfind
 alias ll='exa -la'
 alias ls='exa'
 
@@ -15,10 +14,6 @@ alias gd='git diff'
 alias gp='git pull'
 alias staged='git diff --staged'
 alias stat='git diff --stat'
-
-# tmux
-alias tattach='tmux attach-session -t'
-alias tlist='tmux list-sessions'
 
 # rails aliases
 alias mig='bundle exec rake db:migrate'
