@@ -70,3 +70,6 @@ newHighlight = green bold 22
 
 [branch]
 autosetupmerge = always
+
+[diff "rspec"]
+xfuncname = "^[ \t]*((RSpec|describe|context|it|before|after|around|feature|scenario)[ \t].*)$"
