@@ -19,7 +19,6 @@ alias stat='git diff --stat'
 # tmux
 alias tattach='tmux attach-session -t'
 alias tlist='tmux list-sessions'
-alias mux='tmuxinator list -n | tail -n +2 | fzf --prompt "Project: " -q "$1" | xargs tmuxinator start'
 
 # rails aliases
 alias mig='bundle exec rake db:migrate'
@@ -31,6 +30,12 @@ alias be='bundle exec'
 alias rc='bundle exec rubocop --format fuubar'
 alias rcac='bundle exec rubocop --auto-correct --format fuubar'
 alias rcagc='bundle exec rubocop --auto-gen-config --format fuubar'
+
+function mux () {
+  project=$(tmuxinator list -n | tail -n +2 | fzf --prompt "Project: " -q "$1")
+
+  tmuxinator start $project
+}
 
 function clone_git_repo () {
   owner=$1

@@ -51,6 +51,7 @@ name = Michael Siegfried
 email = michael@procore.com
 
 [core]
+attributesfile=~/.gitattributes
 autocrlf = input
 mergeoptions = --no-edit
 fileMode = false
