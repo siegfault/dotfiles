@@ -21,3 +21,11 @@ ZSH_THEME="alien/alien"
 plugins=()
 
 unsetopt share_history
+
+function gclone() {
+  read "owner?Repo owner: "
+  read "name?Repo name: "
+  read "directory?Directory [~/code/${name}]: "
+
+  clone_git_repo $owner $name ${directory:-~/code/$name}
+}

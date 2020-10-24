@@ -40,3 +40,11 @@ fi
 source $HOME/.asdf/completions/asdf.bash
 
 source ~/.profile
+
+function gclone () {
+  read -p "Repo owner: " owner
+  read -p "Repo name: " name
+  read -p "Directory [~/code/${name}]: " directory
+
+  clone_git_repo $owner $name ${directory:-~/code/$name}
+}

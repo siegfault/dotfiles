@@ -32,25 +32,23 @@ alias rc='bundle exec rubocop --format fuubar'
 alias rcac='bundle exec rubocop --auto-correct --format fuubar'
 alias rcagc='bundle exec rubocop --auto-gen-config --format fuubar'
 
-function gclone () {
-  read -p "Repo owner: " owner
-  read -p "Repo name: " name
-  read -p "Directory [code/${name}]: " directory
+function clone_git_repo () {
+  owner=$1
+  name=$2
+  directory=$3
 
-  basename=${directory##*/}
-  basename=${basename:-${name}}
+  basename=$(basename ${directory})
   tmux_name=$(tmuxinator list -n | tail -n+2 | fzf --prompt="Tmux config: ")
   tmux_source=~/.tmuxinator/${tmux_name}.yml
   tmux_destination=~/.tmuxinator/${basename}.yml
 
-  git clone git@github.com:${owner}/${name}.git ${directory:-code/${name}}
+  git clone git@github.com:${owner}/${name}.git ${directory}
 
   cp $tmux_source $tmux_destination
   sed -in "s/NAME/${basename}/g" $tmux_destination
 
   if grep -q 'UNIQUE_PORT_NUMBER' $tmux_source ; then
-    echo "Ports already used: $(awk -F ':' '/127.0.0.1:[0-9]/ {print $3}' ~/.tmuxinator/* | sort | paste -sd ', ' -)"
-    read -p "Port number: " port
+    port=$(rg '/127.0.0.1:(\d+)' ~/.tmuxinator/ -oIr '$1' | sort | paste -sd',' | fzf --prompt="Choose a unique port number: " --print-query | tail -1)
     sed -in "s/UNIQUE_PORT_NUMBER/${port}/g" $tmux_destination
   fi
 }
