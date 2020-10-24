@@ -1,27 +1,24 @@
 [alias]
-  b      = branch
-  ca     = commit -av
-  cm     = commit -v
-  co     = checkout
-  cob    = checkout -b
-  cp     = cherry-pick
-  d      = diff --check
-  dom    = diff master
-  fo     = fetch origin
-  mer    = pull origin master
-  p      = pull
-  patch  = !git --no-pager diff
-  po     = push -u origin HEAD
-  s      = status
-  sa     = stash apply
-  sapply = "!f() { git stash apply stash^{/$*}; }; f"
-  sdi    = stash show -p
-  sdr    = stash drop
-  sl     = stash list
-  sp     = stash pop
-  ss     = stash save
-  sshow  = "!f() { git stash show stash^{/$*} -p; }; f"
-  subm   = submodule update --init --recursive
+  b     = branch
+  ca    = commit -av
+  cm    = commit -v
+  co    = checkout
+  cob   = checkout -b
+  cp    = cherry-pick
+  d     = diff --check
+  dom   = diff master
+  fo    = fetch origin
+  mer   = pull origin master
+  p     = pull
+  patch = !git --no-pager diff
+  po    = push -u origin HEAD
+  s     = status
+  sa    = stash apply
+  sdi   = stash show -p
+  sdr   = stash drop
+  sl    = stash list
+  sp    = stash pop
+  ss    = stash save
 
 [branch]
   autosetupmerge = always
@@ -57,12 +54,12 @@
   verbose = true
 
 [core]
-  attributesfile=~/.gitattributes
-  autocrlf = input
-  excludesfile = ~/.gitignore_global
-  fileMode = false
-  mergeoptions = --no-edit
-  pager = diff-so-fancy | less --tabs=4 -RFX
+  attributesfile = ~/.gitattributes
+  autocrlf       = input
+  excludesfile   = ~/.gitignore_global
+  fileMode       = false
+  mergeoptions   = --no-edit
+  pager          = diff-so-fancy | less --tabs=4 -RFX
 
 [diff "rspec"]
   xfuncname = "^[ \t]*((RSpec|describe|context|it|before|after|around|feature|scenario)[ \t].*)$"
