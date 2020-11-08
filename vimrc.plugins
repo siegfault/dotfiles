@@ -72,6 +72,7 @@ xmap ga <Plug>(EasyAlign)
 
 " FZF
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
+let g:fzf_files_options = '--preview "bat" --bind alt-j:preview-down,alt-k:preview-up,ctrl-d:preview-page-down,ctrl-u:preview-page-up'
 map <c-f>f :Files<CR>
 map <c-f>h :History<CR>
 map <c-f>l :Lines<CR>
