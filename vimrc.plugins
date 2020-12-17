@@ -138,8 +138,8 @@ nmap <leader>sn :UltiSnipsEdit<CR>
 
 " Vim Fugitive
 nmap <silent> <leader>b :Gblame<CR>
-nmap <silent> <leader>c :Gcommit<CR>
 nmap <silent> <leader>s :Gstatus<CR>
+nmap <silent> <leader>pu :Gpush -u origin HEAD<CR>
 
 " Vimux
 let test#strategy = "vimux"
