@@ -4,7 +4,7 @@ source "scripts/install/is_installed.sh"
 
 function npm_install {
   if ! is_installed "${2:-$1}" ; then
-    sudo npm install -g $1
+    npm install -g $1
   fi
 }
 
