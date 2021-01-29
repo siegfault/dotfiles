@@ -20,6 +20,7 @@ Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ecomba/vim-ruby-refactoring'
 Plug 'exu/pgsql.vim'
+Plug 'idanarye/vim-merginal'
 Plug 'janko-m/vim-test'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -95,6 +96,9 @@ nmap <Leader>d :call RemoveAllDebuggers()<cr>
 " Localorie
 nnoremap <silent> <leader>lt :call localorie#translate()<CR>
 nnoremap <silent> <leader>le :call localorie#expand_key()<CR>
+
+" Merginal
+map <leader>br :MerginalToggle<CR>
 
 " Rainbow Parens
 let g:rainbow_active = 1
