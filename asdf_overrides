@@ -58,7 +58,7 @@ function asdf() {
       esac
       ;;
     *)
-      echo "Plugin not found. Run \"asdf plugin-list\" to find available plugins."
+      ~/.asdf/bin/asdf "$@"
       ;;
   esac
 }
