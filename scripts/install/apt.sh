@@ -16,7 +16,6 @@ apt_install git
 apt_install htop
 apt_install kubectl
 apt_install memcached
-apt_install npm
 apt_install rake
 apt_install rbenv
 apt_install redis redis-cli

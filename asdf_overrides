@@ -41,7 +41,7 @@ function asdf() {
     "pg"|"postgres")
       case $1 in
         "start")
-          pg_ctl start
+          pg_ctl start > /dev/null
           echo "[STARTED] Postgres `asdf current postgres`"
           ;;
         "stop")
@@ -49,7 +49,7 @@ function asdf() {
           echo "[STOPPED] Postgres `asdf current postgres`"
           ;;
         "restart")
-          pg_ctl restart
+          pg_ctl restart > /dev/null
           echo "[RESTARTED] Postgres `asdf current postgres`"
           ;;
         *)
@@ -58,7 +58,7 @@ function asdf() {
       esac
       ;;
     *)
-      echo "Plugin not found. Run \"asdf plugin-list\" to find available plugins."
+      ~/.asdf/bin/asdf "$@"
       ;;
   esac
 }

@@ -70,3 +70,5 @@
 [user]
   name = Michael Siegfried
   email = michael@procore.com
+[pull]
+  rebase = false
