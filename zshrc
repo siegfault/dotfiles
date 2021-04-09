@@ -1,26 +1,23 @@
-export ZSH="/home/siggy/.oh-my-zsh"
 export ALIEN_SECTIONS_LEFT=(exit battery user path vcs_branch:async vcs_status:async vcs_dirty:async ssh prompt)
 export ALIEN_THEME="red"
 
-source $ZSH/oh-my-zsh.sh
 source $HOME/.profile
-source $HOME/alien/alien.zsh
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-COMPLETION_WAITING_DOTS="true"
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-ENABLE_CORRECTION="true"
-HYPHEN_INSENSITIVE="true"
-ZSH_THEME="alien/alien"
+source $HOME/.zplug/init.zsh
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/zsh_completion" ] && \. "$NVM_DIR/zsh_completion"  # This loads nvm zsh_completion
 
-# Add wisely, as too many plugins slow down shell startup.
-plugins=()
+zplug "eendroroy/alien", as:theme
+zplug "jeffreytse/zsh-vi-mode"
+zplug "junegunn/fzf", from:github, as:command, rename-to:fzf, hook-build:"./install --all"
+zplug "junegunn/fzf", from:github, as:plugin, use:"shell/*.zsh"
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+zplug 'zsh-users/zsh-autosuggestions'
+zplug 'zsh-users/zsh-history-substring-search'
+zplug 'zsh-users/zsh-syntax-highlighting', defer:2
 
-unsetopt share_history
+zplug check --verbose || zplug install
+zplug load
 
 function gclone() {
   read "owner?Repo owner: "
