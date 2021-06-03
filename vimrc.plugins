@@ -146,9 +146,12 @@ nmap <silent> <leader>b :Gblame<CR>
 nmap <silent> <leader>s :Gstatus<CR>
 nmap <silent> <leader>pu :Gpush -u origin HEAD<CR>
 
-" Vimux
+" Vim Test
+let g:test#echo_command = 0
+let g:test#preserve_screen = 1
 let test#strategy = "vimux"
-let test#ruby#rspec#executable = 'DISABLE_SPRING=1 RAILS_ENV=test bundle exec rspec'
+let test#ruby#use_binstubs = 0
+
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>g :TestVisit<CR>
