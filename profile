@@ -11,4 +11,4 @@ source $HOME/.aliases
 source $HOME/.asdf/asdf.sh
 source $HOME/.asdf_overrides
 
-set -o vi
+set -o emacs

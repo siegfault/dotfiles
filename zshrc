@@ -8,7 +8,6 @@ source $HOME/.zplug/init.zsh
 [ -s "$NVM_DIR/zsh_completion" ] && \. "$NVM_DIR/zsh_completion"  # This loads nvm zsh_completion
 
 zplug "eendroroy/alien", as:theme
-zplug "jeffreytse/zsh-vi-mode"
 zplug "junegunn/fzf", from:github, as:command, rename-to:fzf, hook-build:"./install --all"
 zplug "junegunn/fzf", from:github, as:plugin, use:"shell/*.zsh"
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
@@ -19,6 +18,9 @@ zplug 'zsh-users/zsh-syntax-highlighting', defer:2
 zplug check --verbose || zplug install
 zplug load
 
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5D' backward-word
+
 function gclone() {
   read "owner?Repo owner: "
   read "name?Repo name: "
@@ -26,3 +28,5 @@ function gclone() {
 
   clone_git_repo $owner $name ${directory:-~/code/$name}
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
