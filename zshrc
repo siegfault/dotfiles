@@ -29,4 +29,9 @@ function gclone() {
   clone_git_repo $owner $name ${directory:-~/code/$name}
 }
 
+function confirm_delete() {
+  read -q "choice?Are you sure you want to delete $1? "
+  echo
+}
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

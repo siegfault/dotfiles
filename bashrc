@@ -48,3 +48,15 @@ function gclone () {
 
   clone_git_repo $owner $name ${directory:-~/code/$name}
 }
+
+function confirm_delete() {
+  read -r -p "Are you sure you want to delete $1? [y/N] " response
+  response=${response,,}    # tolower
+  echo
+  if [[ "$response" =~ ^(yes|y)$ ]]
+  then
+    true
+  else
+    false
+  fi
+}

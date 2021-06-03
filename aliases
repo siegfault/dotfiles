@@ -59,3 +59,8 @@ function clone_git_repo () {
     sed -in "s/UNIQUE_PORT_NUMBER/${port}/g" $tmux_destination
   fi
 }
+
+function destroy_git_repo() {
+  confirm_delete "~/code/$1" && (rm -vrf ~/code/${1} | rg 'removed directory')
+  confirm_delete "~/.tmuxinator/$1" && rm -vf ~/.tmuxinator/${1}.yml
+}
