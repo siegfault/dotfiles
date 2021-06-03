@@ -5,6 +5,7 @@ task :install do
   install_files(dotfiles)
   install_files(snippets)
   install_files(tmuxinator_files)
+  install_files(git_template_files)
 end
 
 def dotfiles
@@ -19,6 +20,10 @@ end
 
 def tmuxinator_files
   Dir.glob('tmuxinator/*')
+end
+
+def git_template_files
+  Dir.glob('git_template/*')
 end
 
 def install_files(files)
