@@ -13,4 +13,5 @@ function npm_install {
 }
 
 npm_install diff-so-fancy
+npm_install livedown
 npm_install tldr

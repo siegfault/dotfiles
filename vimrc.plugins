@@ -39,6 +39,7 @@ Plug 'nelstrom/vim-visual-star-search'
 Plug 'ngmy/vim-rubocop'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'SirVer/ultisnips'
+Plug 'shime/vim-livedown'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary'
@@ -92,6 +93,9 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 nmap <Leader>P :call AddDebugger("O")<cr>
 nmap <Leader>p :call AddDebugger("o")<cr>
 nmap <Leader>d :call RemoveAllDebuggers()<cr>
+
+" Livedown
+nmap gm :LivedownToggle<cr>
 
 " Localorie
 nnoremap <silent> <leader>lt :call localorie#translate()<CR>
