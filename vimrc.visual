@@ -4,11 +4,8 @@ highlight ALEInfoLine    cterm=reverse
 highlight ALEWarningLine cterm=reverse
 highlight ALEInfoLine    cterm=reverse
 
-aug CursorInsert
-  au!
-  autocmd InsertLeave * setlocal nocursorline
-  autocmd InsertEnter * setlocal cursorline
-aug END
+set cursorline
+highlight CursorLine ctermbg=239
 
 " Editing Mode
 command! Codemode set nospell | Goyo! | Limelight!
