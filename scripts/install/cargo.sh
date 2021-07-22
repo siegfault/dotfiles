@@ -14,3 +14,4 @@ function cargo_install {
 
 cargo_install bat
 cargo_install exa
+cargo_install git-delta delta

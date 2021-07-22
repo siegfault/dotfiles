@@ -31,20 +31,6 @@
   local   = yellow
   remote  = green
 
-[color "diff"]
-  commit     = 227 bold
-  frag       = magenta bold
-  meta       = 227
-  new        = green bold
-  old        = red bold
-  whitespace = red reverse
-
-[color "diff-highlight"]
-  oldNormal    = red bold
-  oldHighlight = red bold 52
-  newNormal    = green bold
-  newHighlight = green bold 22
-
 [color "status"]
   added     = yellow
   changed   = green
@@ -59,7 +45,27 @@
   excludesfile   = ~/.gitignore_global
   fileMode       = false
   mergeoptions   = --no-edit
-  pager          = diff-so-fancy | less --tabs=4 -RFX
+  pager          = delta
+
+[pager]
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
+
+[delta]
+  line-numbers = true
+  syntax-theme = Dracula
+  plus-style = syntax "#003800"
+  plus-emph-style = syntax green
+  commit-decoration-style = bold yellow box ul
+  file-style = bold yellow ul
+  file-decoration-style = none
+  hunk-header-decoration-style = cyan box ul
+  line-numbers-left-style = 124
+
+[interactive]
+  diffFilter = delta --color-only
 
 [diff "rspec"]
   xfuncname = "^[ \t]*((RSpec|describe|context|it|before|after|around|feature|scenario)[ \t].*)$"
