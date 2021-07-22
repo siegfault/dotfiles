@@ -18,7 +18,7 @@ alias stat='git diff --stat'
 # rails aliases
 alias mig='bundle exec rake db:migrate'
 alias spec='RAILS_ENV=test bundle exec rspec'
-alias setup='bundle exec rake db:drop && bundle exec rake db:setup && bundle exec rake db:migrate && bundle exec rake db:test:prepare'
+alias setup='bundle exec rake db:reset && bundle exec rake db:migrate && bundle exec rake db:test:prepare'
 alias be='bundle exec'
 
 # rubocop
