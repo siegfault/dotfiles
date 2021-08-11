@@ -61,6 +61,11 @@ function clone_git_repo () {
 }
 
 function destroy_git_repo() {
-  confirm_delete "~/code/$1" && (rm -vrf ~/code/${1} | rg 'removed directory')
-  confirm_delete "~/.tmuxinator/$1" && rm -vf ~/.tmuxinator/${1}.yml
+  if  [ $# -eq 0 ]; then
+    echo 'No repository passed'
+  else
+    confirm_delete "~/code/$1" && (rm -vrf ~/code/${1} | rg 'removed directory')
+    echo
+    confirm_delete "~/.tmuxinator/$1" && rm -vf ~/.tmuxinator/${1}.yml
+  fi
 }

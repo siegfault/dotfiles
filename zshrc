@@ -30,8 +30,13 @@ function gclone() {
 }
 
 function confirm_delete() {
-  read -q "choice?Are you sure you want to delete $1? "
-  echo
+  if read -q "choice?Are you sure you want to delete $1? "; then
+    echo
+    true
+  else
+    echo
+    false
+  fi
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
