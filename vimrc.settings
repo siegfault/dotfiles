@@ -5,6 +5,7 @@ set scrolloff=2
 set sw=2 tabstop=2 shiftround               " Whitespace
 set number relativenumber                   " Numbering
 set hlsearch ignorecase incsearch smartcase " Search
+set shortmess-=S                            " Count search matches and progress
 set cindent expandtab                       " Indentation
 set updatetime=250                          " vim-gitgutter
 set wildmenu wildmode=full                  " Autocompletion

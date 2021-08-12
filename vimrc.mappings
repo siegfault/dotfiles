@@ -3,7 +3,6 @@ nmap <silent> <leader>r :set rnu!<CR>             " Toggle Relative Numbers
 nmap <Leader>pg :set syntax=pgsql<cr>
 
 map <Leader>* :Rg <cword><CR>
-map <Leader># :%s///gn<CR> " Count search matches
 map <Leader>x :nohlsearch<CR>
 
 nnoremap & :&&<CR>
