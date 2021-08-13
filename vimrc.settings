@@ -17,6 +17,7 @@ set hidden
 set viminfo='100,n$HOME/.vim/files/info/viminfo
 set swapfile
 set dir=/tmp
+set ttimeoutlen=0
 
 let mapleader = "\<Space>"
 
