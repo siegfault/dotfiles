@@ -17,14 +17,6 @@ cnoremap <C-n> <Down>
 " Expand current path
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
-" Bubbling lines up/down
-nnoremap <C-j> :m .+1<CR>==
-nnoremap <C-k> :m .-2<CR>==
-inoremap <C-j> <Esc>:m .+1<CR>==gi
-inoremap <C-k> <Esc>:m .-2<CR>==gi
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
-
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-x>\<C-u>\<C-p>" " Completion
 
 " Split lines
@@ -32,6 +24,18 @@ map K i<Enter><Esc>
 
 " Co-author
 command! -nargs=+ Coauth :r!git log -n1000 --pretty=format:"\%an <\%ae>" | grep -i '<args>' | head -1 | xargs echo "Co-authored-by:"
+
+" Allow <Alt-> modifiers
+" https://github.com/matze/vim-move/issues/15#issuecomment-168177827
+" for terms that send Alt as Escape sequence
+" see http://vim.wikia.com/wiki/Mapping_fast_keycodes_in_terminal_Vim
+" for why the <F20> hack. Keeps Esc from waiting for other keys to exit visual
+set <F20>=j
+set <F21>=k
+vmap <F20> <Plug>MoveBlockDown
+vmap <F21> <Plug>MoveBlockUp
+nmap <F20> <Plug>MoveLineDown
+nmap <F21> <Plug>MoveLineUp
 
 " Wrap
 let s:wrapenabled = 0
