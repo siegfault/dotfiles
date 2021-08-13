@@ -9,6 +9,7 @@ function apt_install {
 }
 
 apt_install curl
+apt_install dconf-cli dconf
 apt_install fonts-powerline
 apt_install fzf
 apt_install gist
