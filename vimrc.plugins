@@ -149,6 +149,10 @@ nmap <silent> <leader>b :Gblame<CR>
 nmap <silent> <leader>s :Gstatus<CR>
 nmap <silent> <leader>pu :Gpush -u origin HEAD<CR>
 
+" Vim Rhubarb
+nnoremap <Leader>gh :.GBrowse<CR>
+xnoremap <Leader>gh :'<'>GBrowse<CR>
+
 " Vim Test
 let g:test#echo_command = 0
 let g:test#preserve_screen = 1
@@ -161,6 +165,3 @@ nmap <silent> <leader>g :TestVisit<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>t :TestNearest<CR>
 
-" Vim Rhubarb
-nnoremap <Leader>gh :.GBrowse<CR>
-xnoremap <Leader>gh :'<'>GBrowse<CR>
