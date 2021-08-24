@@ -8,6 +8,7 @@ function apt_install {
   fi
 }
 
+apt_install brave-browser
 apt_install curl
 apt_install dconf-cli dconf
 apt_install fonts-powerline

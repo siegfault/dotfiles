@@ -3,8 +3,6 @@
 source "scripts/install/is_installed.sh"
 
 INSTALL_DIRECTORY=~/code/installs
-CHROME_DEB=google-chrome-stable_current_amd64.deb
-CHROME_URL=https://dl.google.com/linux/direct
 ZOOM_DEB=zoom_amd64.deb
 ZOOM_URL=https://zoom.us/client/latest
 
@@ -15,5 +13,4 @@ function wget_install {
   fi
 }
 
-wget_install google-chrome $CHROME_URL $CHROME_DEB
 wget_install zoom $ZOOM_URL $ZOOM_DEB
