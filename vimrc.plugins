@@ -165,3 +165,6 @@ nmap <silent> <leader>g :TestVisit<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>t :TestNearest<CR>
 
+function! RunNearestWithGemfile(gemfile)
+  :call VimuxRunCommand("BUNDLE_GEMFILE=" . a:gemfile . " bundle exec rspec " . expand("%t") . ":" . line("."))
+endfunction
