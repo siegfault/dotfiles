@@ -145,7 +145,7 @@ nmap <leader>sp :Snippets<CR>a
 nmap <leader>sn :UltiSnipsEdit<CR>
 
 " Vim Fugitive
-nmap <silent> <leader>b :Gblame<CR>
+nmap <silent> <leader>b :Git blame<CR>
 nmap <silent> <leader>s :Gstatus<CR>
 nmap <silent> <leader>pu :Gpush -u origin HEAD<CR>
 
