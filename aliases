@@ -16,7 +16,7 @@ alias staged='git diff --staged'
 alias stat='git diff --stat'
 
 function gco() {
-  git checkout $(git branch --all | fzf| tr -d '[:space:]')
+  git checkout $(git branch --all | rg --passthru -r '$2' ' *(remotes/origin/)?(.*)$' | fzf)
 }
 
 # rails aliases
