@@ -11,3 +11,5 @@ highlight CursorLine ctermbg=239
 " Editing Mode
 command! Codemode set nospell | Goyo! | Limelight!
 command! Writemode setlocal spell | Goyo | Limelight
+command! Solomode set rnu nu
+command! Pairmode set nornu nu
