@@ -46,7 +46,7 @@ function gclone () {
   read -p "Repo name: " name
   read -p "Directory [~/code/${name}]: " directory
 
-  clone_git_repo $owner $name ${directory:-~/code/$name}
+  clone_git_repo $owner $name ~/code/${directory:-$name}
 }
 
 function confirm_delete() {
