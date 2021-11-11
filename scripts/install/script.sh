@@ -2,13 +2,6 @@
 
 source "scripts/install/is_installed.sh"
 
-if [ ! -d /home/siggy/.oh-my-zsh ]; then
-  echo "Installing: OhMyZsh"
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-else
-  echo "Already installed: OhMyZsh"
-fi
-
 AWS_IAM_AUTH_LOC=/usr/bin/aws-iam-authenticator
 if [ ! -f $AWS_IAM_AUTH_LOC ]; then
   echo "Installing: aws-iam-authenticator"
