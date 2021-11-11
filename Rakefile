@@ -2,6 +2,8 @@ require 'rake'
 
 desc "install the dot files into user's home directory"
 task :install do
+  FileUtils.mkdir_p("#{Dir.home}/.git_template/hooks") unless Dir.exist?('~/.git_template')
+
   install_files(dotfiles)
   install_files(snippets)
   install_files(tmuxinator_files)
@@ -23,7 +25,7 @@ def tmuxinator_files
 end
 
 def git_template_files
-  Dir.glob('git_template/*')
+  Dir.glob('git_template/hooks/*')
 end
 
 def install_files(files)
