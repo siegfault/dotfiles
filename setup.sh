@@ -2,7 +2,6 @@
 
 # TODO
 # Better output
-# Introduce a curl script to do full setup
 
 set -e
 
@@ -36,6 +35,7 @@ bash "scripts/versions.sh"
 
 if [ $INITIAL_SETUP -eq 0 ]; then
   git remote set-url origin git@github.com:siegfault/dotfiles.git
+  rm ~/setup.sh
 fi
 
 sudo apt -qq upgrade -y
