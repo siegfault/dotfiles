@@ -51,7 +51,7 @@ _gr() {
   cut -d$'\t' -f1
 }
 
-_gs() {
+_gp() {
   is_in_git_repo || return
   git stash list | fzf-down --reverse -d: --preview 'git show --color=always {1}' |
   cut -d: -f1

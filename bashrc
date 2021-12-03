@@ -68,5 +68,5 @@ if [[ $- =~ i ]]; then
   bind '"\C-g\C-t": "$(_gt)\e\C-e\er"'
   bind '"\C-g\C-h": "$(_gh)\e\C-e\er"'
   bind '"\C-g\C-r": "$(_gr)\e\C-e\er"'
-  bind '"\C-g\C-s": "$(_gs)\e\C-e\er"'
+  bind '"\C-g\C-p": "$(_gp)\e\C-e\er"'
 fi
