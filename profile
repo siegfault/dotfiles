@@ -10,5 +10,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 source $HOME/.aliases
 source $HOME/.asdf/asdf.sh
 source $HOME/.asdf_overrides
+source $HOME/.functions.sh
 
 set -o emacs
