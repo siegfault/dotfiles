@@ -1,0 +1,4 @@
+if [ -f Gemfile ]; then
+  git diff --staged --name-only --diff-filter=AM HEAD | \
+    xargs --no-run-if-empty bundle exec rubocop --display-cop-names --extra-details --parallel --force-exclusion
+fi
