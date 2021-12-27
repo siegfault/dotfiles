@@ -26,8 +26,10 @@ alias rc='bundle exec rubocop --format fuubar'
 alias rcac='bundle exec rubocop --auto-correct --format fuubar'
 alias rcagc='bundle exec rubocop --auto-gen-config --format fuubar'
 
+export tmux_templates="(vim_and_terminal|(rails_(simple|complex)))"
+
 function mux () {
-  project=$(tmuxinator list -n | tail -n +2 | fzf --prompt "Project: " -1 -q "$1")
+  project=$(tmuxinator list -n | tail -n +2 | rg -v "$tmux_templates" | fzf --prompt "Project: " -1 -q "$1")
 
   tmuxinator start $project
 }
@@ -45,7 +47,7 @@ function clone_git_repo () {
   directory=$3
 
   basename=$(basename ${directory})
-  tmux_name=$(tmuxinator list -n | tail -n+2 | fzf --prompt="Tmux config: ")
+  tmux_name=$(tmuxinator list -n | rg "$tmux_templates" | fzf --prompt="Tmux config: ")
   tmux_source=~/.tmuxinator/${tmux_name}.yml
   tmux_destination=~/.tmuxinator/${basename}.yml
 
