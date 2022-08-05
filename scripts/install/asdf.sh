@@ -15,6 +15,4 @@ function asdf_install {
   fi
 }
 
-asdf_install elasticsearch https://github.com/asdf-community/asdf-elasticsearch.git
-asdf_install kibana        https://github.com/mikestephens/asdf-kibana.git
 asdf_install postgres

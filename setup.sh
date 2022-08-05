@@ -23,7 +23,6 @@ if [ $INITIAL_SETUP -eq 0 ]; then
 fi
 cd $DOTFILES_PATH
 
-bash "scripts/desktop.sh"
 bash "scripts/directories.sh"
 bash "scripts/keys.sh"
 bash "scripts/install.sh"

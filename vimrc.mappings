@@ -1,6 +1,5 @@
 nmap <silent> <leader>n :set nu!<CR>:set rnu!<CR> " Toggle Numbers
 nmap <silent> <leader>r :set rnu!<CR>             " Toggle Relative Numbers
-nmap <Leader>pg :set syntax=pgsql<cr>
 
 map <Leader>* :Rg <cword><CR>
 map <Leader>x :nohlsearch<CR>
