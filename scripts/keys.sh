@@ -3,7 +3,7 @@
 SSH_KEY=~/.ssh/id_rsa
 if [ ! -f $SSH_KEY ]; then
   echo "Generating ssh key"
-  ssh-keygen -t rsa -b 4096 -N "" -f $SSH_KEY -C "michael@procore.com"
+  ssh-keygen -t rsa -b 4096 -N "" -f $SSH_KEY -C "michaeldiegfried@gmail.com"
   printf %.s= {1..100}
   echo
   cat $SSH_KEY.pub
