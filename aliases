@@ -50,17 +50,22 @@ function clone_git_repo () {
 
   basename=$(basename ${directory})
   tmux_name=$(tmuxinator list -n | rg "$tmux_templates" | fzf --prompt="Tmux config: ")
-  tmux_source=~/.tmuxinator/${tmux_name}.yml
-  tmux_destination=~/.tmuxinator/${basename}.yml
 
   git clone git@github.com:${owner}/${name}.git ${directory}
 
-  cp $tmux_source $tmux_destination
-  sed -in "s/NAME/${basename}/g" $tmux_destination
+  tmuxinator_clone $tmux_name $basename
+}
 
-  if grep -q 'UNIQUE_PORT_NUMBER' $tmux_source ; then
+function tmuxinator_clone() {
+  source=~/.tmuxinator/${1}.yml
+  destination=~/.tmuxinator/${2}.yml
+
+  cp $source $destination
+  sed -in "s/NAME/${2}/g" $destination
+
+  if grep -q 'UNIQUE_PORT_NUMBER' $source ; then
     port=$(rg '/127.0.0.1:(\d+)' ~/.tmuxinator/ -oIr '$1' | sort | paste -sd',' | fzf --prompt="Choose a unique port number: " --print-query | tail -1)
-    sed -in "s/UNIQUE_PORT_NUMBER/${port}/g" $tmux_destination
+    sed -in "s/UNIQUE_PORT_NUMBER/${port}/g" $destination
   fi
 }
 

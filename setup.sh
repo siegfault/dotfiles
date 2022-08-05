@@ -35,6 +35,7 @@ bash "scripts/versions.sh"
 
 if [ $INITIAL_SETUP -eq 0 ]; then
   git remote set-url origin git@github.com:siegfault/dotfiles.git
+  tmuxinator_clone vim_and_terminal dotfiles
   rm ~/setup.sh
 fi
 
