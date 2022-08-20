@@ -21,6 +21,9 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-x>\<C-u>\<C-p>" " Completio
 " Split lines
 map K i<Enter><Esc>
 
+" frozen_string_literal: true
+nnoremap fsl gg0i# frozen_string_literal: true<CR><CR><Esc><C-O>
+
 " Co-author
 command! -nargs=+ Coauth :r!git log -n1000 --pretty=format:"\%an <\%ae>" | grep -i '<args>' | head -1 | xargs echo "Co-authored-by:"
 
