@@ -7,7 +7,3 @@ highlight ALEInfoLine    cterm=reverse
 
 set cursorline
 highlight CursorLine ctermbg=239
-
-" Editing Mode
-command! Solomode set rnu nu
-command! Pairmode set nornu nu
