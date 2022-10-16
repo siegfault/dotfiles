@@ -17,9 +17,3 @@ windows:
         - vim
         -
   - terminal:
-  - resque:
-      layout: tiled
-      panes:
-        - mailcatcher
-        - QUEUE=* bundle exec rake resque:work
-        - bundle exec sidekiq
