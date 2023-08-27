@@ -28,7 +28,7 @@ alias rc='bundle exec rubocop --format fuubar'
 alias rcac='bundle exec rubocop --auto-correct --format fuubar'
 alias rcagc='bundle exec rubocop --auto-gen-config --format fuubar'
 
-export tmux_templates="(vim_and_terminal|rails)"
+export tmux_templates="(vim_and_terminal|rails_(complex|simple))$"
 
 function mux () {
   project=$(tmuxinator list -n | tail -n +2 | rg -v "$tmux_templates" | fzf --prompt "Project: " -1 -q "$1")
