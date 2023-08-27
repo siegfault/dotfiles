@@ -13,4 +13,15 @@ augroup filetype_eruby_yaml
   au FileType eruby.yaml setlocal commentstring=#\ %s
 augroup end
 
+au! BufRead,BufNewFile *.json set filetype=json
+aug json_autocmd
+  au!
+  au FileType json set autoindent
+  au FileType json set formatoptions=tcq2l
+  au FileType json set textwidth=78 shiftwidth=2
+  au FileType json set softtabstop=2 tabstop=8
+  au FileType json set expandtab
+  au FileType json set foldmethod=syntax
+aug END
+
 set autoread
