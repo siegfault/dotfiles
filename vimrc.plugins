@@ -57,6 +57,8 @@ Plug 'vim-scripts/SQLUtilities'
 Plug 'w0rp/ale'
 call plug#end()
 
+nnoremap gz yi':!xdg-open https://www.github.com/<C-R>"<CR><CR>
+
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 
