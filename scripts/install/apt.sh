@@ -28,6 +28,6 @@ apt_install tmuxinator
 apt_install tree
 apt_install zsh
 
-if $SHELL -ne "/bin/bash" ; then
+if [ $SHELL = "/bin/bash" ] ; then
   chsh -s /bin/zsh
 fi
