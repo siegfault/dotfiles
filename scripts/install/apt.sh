@@ -13,7 +13,7 @@ apt_install curl
 apt_install dconf-cli dconf
 apt_install fonts-powerline
 apt_install fzf
-apt_install gist
+apt_install gist gist-paste
 apt_install git
 apt_install htop
 apt_install kubectl
