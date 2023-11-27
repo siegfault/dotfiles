@@ -4,7 +4,7 @@ source "scripts/install/is_installed.sh"
 
 function apt_install {
   if ! is_installed "${2:-$1}" ; then
-    sudo apt install -y $1
+    sudo apt-get install -y $1
   fi
 }
 

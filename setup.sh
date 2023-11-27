@@ -12,11 +12,11 @@ else
   INITIAL_SETUP=0
 fi
 
-sudo apt -qq update
+sudo apt-get -qq update
 
 if [ $INITIAL_SETUP -eq 0 ]; then
   mkdir -p ~/code
-  sudo apt -qq install -y git
+  sudo apt-get -qq install -y git
   git config --global user.email "michaeldsiegfried@gmail.com"
   git config --global user.name "Michael Siegfried"
   git clone https://github.com/siegfault/dotfiles.git $DOTFILES_PATH
@@ -38,5 +38,5 @@ if [ $INITIAL_SETUP -eq 0 ]; then
   rm ~/setup.sh
 fi
 
-sudo apt -qq upgrade -y
-sudo apt -qq autoremove -y
+sudo apt-get -qq upgrade -y
+sudo apt-get -qq autoremove -y
