@@ -8,6 +8,7 @@ task :install do
   install_files(snippets)
   install_files(tmuxinator_files)
   install_files(git_template_files)
+  install_files(rails_template_files)
 end
 
 def dotfiles
@@ -26,6 +27,10 @@ end
 
 def git_template_files
   Dir.glob('git_template/hooks/*')
+end
+
+def rails_template_files
+  Dir.glob('rails/*')
 end
 
 def install_files(files)
