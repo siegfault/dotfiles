@@ -1,4 +1,3 @@
---css=tailwind
 --database=postgresql
 --skip-test # will be using rspec
 --template=~/.rails/template.rb
