@@ -1,3 +1,5 @@
+--css=sass
 --database=postgresql
+--javascript=esbuild
 --skip-test # will be using rspec
 --template=~/.rails/template.rb
