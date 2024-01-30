@@ -24,9 +24,11 @@ bindkey '^[[1;5D' backward-word
 function gclone() {
   read "owner?Repo owner: "
   read "name?Repo name: "
-  read "directory?Directory [~/code/${name}]: "
+  read "org?Organization: "
+  read "directory?Directory [~/code/${org}/${name}]: "
 
-  clone_git_repo $owner $name ~/code/${directory:-$name}
+  mkdir -p ~/code/${org}
+  clone_git_repo $owner $name ~/code/${org}/${directory:-$name}
 }
 
 function confirm_delete() {

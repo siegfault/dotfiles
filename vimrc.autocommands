@@ -4,7 +4,7 @@ autocmd VimResized * wincmd = " Automatic window resize
 
 aug AutoloadVimrc
   au!
-  au BufWritePost ~/code/dotfiles/vimrc* source ~/.vimrc
+  au BufWritePost ~/code/personal/dotfiles/vimrc* source ~/.vimrc
   au BufWritePost ~/.vimrc* source ~/.vimrc
 aug END
 

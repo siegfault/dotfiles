@@ -44,9 +44,11 @@ source ~/.profile
 function gclone () {
   read -p "Repo owner: " owner
   read -p "Repo name: " name
-  read -p "Directory [~/code/${name}]: " directory
+  read -p "Organization: " org
+  read -p "Directory [~/code/${org}/${name}]: " directory
 
-  clone_git_repo $owner $name ~/code/${directory:-$name}
+  mkdir -p ~/code/${org}
+  clone_git_repo $owner $name ~/code/${org}/${directory:-$name}
 }
 
 function confirm_delete() {

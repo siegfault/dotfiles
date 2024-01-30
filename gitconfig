@@ -73,8 +73,11 @@
 [init]
   templatedir = ~/.git_template
 
-[user]
-  name = Michael Siegfried
-  email = michaeldsiegfried@gmail.com
+[includeIf "gitdir:~/code/personal/"]
+  path = ~/.gitconfig-personal
+
+[includeIf "gitdir:~/code/loamy/"]
+  path = ~/.gitconfig-loamy
+
 [pull]
   rebase = false

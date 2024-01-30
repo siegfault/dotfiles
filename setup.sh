@@ -5,7 +5,7 @@
 
 set -e
 
-DOTFILES_PATH=~/code/dotfiles
+DOTFILES_PATH=~/code/personal/dotfiles
 if [ -d $DOTFILES_PATH ]; then
   INITIAL_SETUP=1
 else
@@ -16,6 +16,7 @@ sudo apt-get -qq update
 
 if [ $INITIAL_SETUP -eq 0 ]; then
   mkdir -p ~/code
+  mkdir -p ~/code/personal
   sudo apt-get -qq install -y git
   git config --global user.email "michaeldsiegfried@gmail.com"
   git config --global user.name "Michael Siegfried"
