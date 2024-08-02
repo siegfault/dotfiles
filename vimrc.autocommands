@@ -13,6 +13,8 @@ augroup filetype_eruby_yaml
   au FileType eruby.yaml setlocal commentstring=#\ %s
 augroup end
 
+au! BufNewFile,BufRead *.prawn set filetype=ruby
+
 au! BufRead,BufNewFile *.json set filetype=json
 aug json_autocmd
   au!
