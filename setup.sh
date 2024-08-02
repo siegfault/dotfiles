@@ -20,7 +20,7 @@ if [ $INITIAL_SETUP -eq 0 ]; then
   sudo apt-get -qq install -y git
   git config --global user.email "michaeldsiegfried@gmail.com"
   git config --global user.name "Michael Siegfried"
-  git clone https://github.com/siegfault/dotfiles.git $DOTFILES_PATH
+  git clone git@github.com:siegfault/dotfiles.git $DOTFILES_PATH
 fi
 cd $DOTFILES_PATH
 
