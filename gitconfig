@@ -8,7 +8,7 @@
   d     = diff --check
   dom   = diff master
   fo    = fetch origin
-  mer   = pull origin master
+  mer   = pull origin main
   p     = pull
   patch = !git --no-pager diff
   po    = push -u origin HEAD
