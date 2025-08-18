@@ -18,7 +18,7 @@
   sdr   = stash drop
   sl    = stash list
   sp    = stash pop
-  ss    = stash save
+  ss    = stash push
 
 [branch]
   autosetupmerge = always
