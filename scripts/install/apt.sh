@@ -8,13 +8,18 @@ function apt_install {
   fi
 }
 
+apt_install bison
 apt_install curl
 apt_install dconf-cli dconf
+apt_install flex
 apt_install fonts-powerline
 apt_install fzf
 apt_install gist gist-paste
 apt_install git
 apt_install htop
+apt_install libffi-dev
+apt_install libmagickcore-dev
+apt_install libyaml-dev
 apt_install memcached
 apt_install rake
 apt_install rbenv
@@ -24,6 +29,7 @@ apt_install ruby-build
 apt_install tmux
 apt_install tmuxinator
 apt_install tree
+apt_install uuid-dev
 apt_install zsh
 
 if [ $SHELL = "/bin/bash" ] ; then
