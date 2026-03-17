@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-bash "scripts/install/add_sources.sh"
 bash "scripts/install/apt.sh"
 bash "scripts/install/asdf.sh"
 bash "scripts/install/cargo.sh"
