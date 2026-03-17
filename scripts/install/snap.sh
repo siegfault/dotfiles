@@ -9,6 +9,5 @@ function snap_install {
 }
 
 snap_install circleci
-snap_install "heroku --classic" heroku
 snap_install "slack --classic" slack
 snap_install spotify

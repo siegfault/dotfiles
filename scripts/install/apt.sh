@@ -15,7 +15,6 @@ apt_install fzf
 apt_install gist gist-paste
 apt_install git
 apt_install htop
-apt_install kubectl
 apt_install memcached
 apt_install rake
 apt_install rbenv
