@@ -1,6 +1,6 @@
 #/usr/bin/env bash
 
-SSH_KEY=~/.ssh/id_rsa
+SSH_KEY=~/.ssh/id_ed25519
 if [ ! -f $SSH_KEY ]; then
   echo "Generating ssh key"
   ssh-keygen -t rsa -b 4096 -N "" -f $SSH_KEY -C "michaeldsiegfried@gmail.com"
