@@ -9,8 +9,6 @@ function add_package_repository {
   fi
 }
 
-add_package_repository yarn https://dl.yarnpkg.com/debian/pubkey.gpg "deb https://dl.yarnpkg.com/debian/ stable main" yarn.list
-
 if ! is_installed brave-browser; then
   sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 

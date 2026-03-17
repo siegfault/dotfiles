@@ -3,7 +3,7 @@
 source "scripts/install/is_installed.sh"
 
 if ! is_installed node ; then
-  nvm install node
+  nvm install 24
 fi
 
 function npm_install {
