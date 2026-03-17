@@ -23,8 +23,8 @@ if ! is_installed vim ; then
     --enable-rubyinterp=dynamic \
     --with-ruby-command=/home/$USER/.rbenv/shims/ruby \
     --enable-python3interp \
-    --with-python3-command=python3.8
-    --with-python3-config-dir=/usr/lib/python3.8/config-3.8-x86_64-linux-gnu/ \
+    --with-python3-command=python$(python3 --version | cut -c8-11)
+    --with-python3-config-dir=/usr/lib/python$(python3 --version | cut -c8-11)/config-$(python3 --version | cut -c8-11)-x86_64-linux-gnu/ \
     --enable-luainterp \
     --with-luajit \
     --enable-cscope \
