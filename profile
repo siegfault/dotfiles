@@ -4,6 +4,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/bin/asdf:$PATH"
 
 [[ -s /home/siggy/.autojump/etc/profile.d/autojump.sh ]] && source /home/siggy/.autojump/etc/profile.d/autojump.sh
 
