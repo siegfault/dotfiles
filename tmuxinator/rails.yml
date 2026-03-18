@@ -7,7 +7,7 @@ windows:
   - rails:
       layout: tiled
       panes:
-        - bundle exec puma -b tcp://127.0.0.1:UNIQUE_PORT_NUMBER
+        - PORT=UNIQUE_PORT_NUMBER bin/dev
         - bundle exec rails c
         - tail -f log/development.log
         - bundle exec rails db
